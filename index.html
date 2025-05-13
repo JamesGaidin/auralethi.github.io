@@ -13,17 +13,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 4rem;
+      text-align: center;
     }
+
     h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
     }
+
     p {
       font-size: 1.2rem;
       max-width: 600px;
-      text-align: center;
     }
+
     .button {
       margin-top: 2rem;
       background: #33c1b1;
@@ -33,24 +37,32 @@
       border-radius: 8px;
       font-weight: bold;
     }
+
+    #quote {
+      opacity: 0;
+      transition: opacity 2s ease-in;
+      font-style: italic;
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      color: #a8e0ff;
+    }
   </style>
 </head>
 <body>
   <h1>Auralethi</h1>
   <p>A sanctuary for the misunderstood. A place where healing begins.</p>
-  <a href="https://www.gofundme.com/f/auralethi" class="button">Support the Launch</a>
-  <p id="quote">This is where healing begins.</p>
-<script>
-  setTimeout(() => {
-    document.getElementById('quote').style.opacity = 1;
-  }, 500);
-</script>
-<style>
-  #quote {
-    opacity: 0;
-    transition: opacity 2s ease-in;
-  }
-</style>
 
+  <!-- Resonant quote (fades in on load) -->
+  <p id="quote">This is where healing begins.</p>
+
+  <!-- GoFundMe link -->
+  <a href="https://www.gofundme.com/f/auralethi" class="button">Support the Launch</a>
+
+  <!-- Script to fade in the quote -->
+  <script>
+    setTimeout(() => {
+      document.getElementById('quote').style.opacity = 1;
+    }, 500);
+  </script>
 </body>
 </html>

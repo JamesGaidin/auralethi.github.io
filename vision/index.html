@@ -1,1 +1,140 @@
-stuff
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auralethi — The Vision</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 6rem 1.5rem 2rem; /* add top padding for navbar space */
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #1a1a1a;
+      color: #f2f2f2;
+      line-height: 1.7;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #a8e0ff;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #66e6d3;
+      margin-top: 2rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #cddff7;
+      margin: 2rem 0;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    #main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #121212dd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    #main-nav a {
+      color: #a8e0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    #main-nav a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch('/shared/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+      });
+  </script>
+
+  <h1>Auralethi: A Sanctuary for the Misunderstood</h1>
+  <p class="quote">This is where healing begins.</p>
+
+  <p>I’ve spent most of my life feeling like I didn’t quite fit—like I had something to offer, but nowhere to truly offer it.</p>
+
+  <p>And I know I’m not alone in that.</p>
+
+  <p>There are so many of us—neurodivergent, disabled, misunderstood—who carry brilliance, compassion, creativity... but struggle to find a place where any of it feels welcome.</p>
+
+  <p>That’s why I’m building Auralethi: a sanctuary for those who’ve been told they don’t belong. A place designed not to fix people, but to honor them.</p>
+
+  <h2>What is Auralethi?</h2>
+  <p>Auralethi is more than a nonprofit. It’s a promise.</p>
+
+  <p>We’re designing Valenhold, a 14-story building that will be the first of its kind:</p>
+  <ul>
+    <li>Floor 1: urgent care, a market, and a daycare</li>
+    <li>Floors 2–3: labs, training centers, healing and reflection spaces</li>
+    <li>Floors 4–14: custom modular apartments designed for neurodiverse needs</li>
+    <li>Rooftop: the Sky Sanctuary—a garden, solar field, and open-air performance dome</li>
+    <li>Sublevels: parking, power infrastructure, and full-building vertical grow systems</li>
+  </ul>
+
+  <p>It’s a home. A workplace. A launchpad. Every part of it supports those who’ve been told they can’t—and helps them discover that they absolutely can.</p>
+
+  <h2>Why $50,000?</h2>
+  <p>This campaign is the first step. With your help, I can:</p>
+  <ul>
+    <li>Legally establish Auralethi as a 501(c)(3) nonprofit</li>
+    <li>Commission architectural visuals and planning documentation</li>
+    <li>Build a pitch deck and media kit to present to grant foundations</li>
+    <li>Cover basic personal expenses so I can work full-time on this mission for 3 months</li>
+    <li>Launch KEFR — Elyndra Frequency Radio, a curated playlist that tells Auralethi’s story through the music that birthed it</li>
+  </ul>
+
+  <h2>Why Now?</h2>
+  <p>This world can be isolating for those who think, feel, or function differently. Too many of us fall through the cracks—not because we have nothing to give, but because we’re never given a chance to give it.</p>
+
+  <p>Auralethi is that chance. A place where contribution is designed with dignity. A future shaped by care, consent, and resonance.</p>
+
+  <p class="quote">This is the proof that a better way is possible—because we’re building it.</p>
+
+  <div class="footer">
+    Written and shared with love by James Dayson.  
+    <br />Site live as of May 13, 2025.
+  </div>
+</body>
+</html>
+

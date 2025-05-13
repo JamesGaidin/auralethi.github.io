@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auralethi</title>
   <style>
+    #quote {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  color: #a8e0ff;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Glowing pulse keyframes */
+@keyframes pulse {
+  0% { text-shadow: 0 0 0px #a8e0ff; }
+  50% { text-shadow: 0 0 12px #a8e0ff; }
+  100% { text-shadow: 0 0 0px #a8e0ff; }
+}
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;

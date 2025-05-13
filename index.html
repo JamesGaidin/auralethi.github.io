@@ -39,5 +39,18 @@
   <h1>Auralethi</h1>
   <p>A sanctuary for the misunderstood. A place where healing begins.</p>
   <a href="https://www.gofundme.com/f/auralethi" class="button">Support the Launch</a>
+  <p id="quote">This is where healing begins.</p>
+<script>
+  setTimeout(() => {
+    document.getElementById('quote').style.opacity = 1;
+  }, 500);
+</script>
+<style>
+  #quote {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+  }
+</style>
+
 </body>
 </html>

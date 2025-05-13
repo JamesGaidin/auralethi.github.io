@@ -4,50 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KEFR — Elyndra Frequency Radio</title>
-  <style
-    #site-footer {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid #333;
-}
-
-#site-footer a {
-  color: #a8e0ff;
-  text-decoration: none;
-}
-
-#site-footer a:hover {
-  color: #ffffff;
-}
-
-    #main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #121212dd;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-}
-
-#main-nav a {
-  color: #a8e0ff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#main-nav a:hover {
-  color: #ffffff;
-}
-
+  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -56,8 +13,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 4rem 1rem;
+      padding: 6rem 1rem 4rem;
       text-align: center;
+      min-height: 100vh;
     }
 
     h1 {
@@ -103,19 +61,65 @@
       width: 100%;
       height: 352px;
     }
+
+    #main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #121212dd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    #main-nav a {
+      color: #a8e0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    #main-nav a:hover {
+      color: #ffffff;
+    }
+
+    #site-footer {
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    #site-footer a {
+      color: #a8e0ff;
+      text-decoration: none;
+    }
+
+    #site-footer a:hover {
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
+  <!-- Inject navbar -->
   <div id="navbar-placeholder"></div>
-
-<script>
-  fetch('/shared/navbar.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-placeholder').innerHTML = html;
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('/shared/navbar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('navbar-placeholder').innerHTML = html;
+        });
     });
-</script>
+  </script>
 
+  <!-- Main content -->
   <h1>KEFR — Elyndra Frequency Radio</h1>
   <div class="subhead">Now broadcasting from within the heart of Valenhold...</div>
 
@@ -126,14 +130,17 @@
   <div class="player-wrapper">
     <iframe src="https://open.spotify.com/embed/playlist/4d4ouLnIBZhxmb6yOMsIf1?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
-  <div id="footer-placeholder"></div>
-<script>
-  fetch('/shared/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-    });
-</script>
 
+  <!-- Inject footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('/shared/footer.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+    });
+  </script>
 </body>
 </html>

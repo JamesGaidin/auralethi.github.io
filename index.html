@@ -1,70 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  #site-footer {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid #333;
-}
-
-#site-footer a {
-  color: #a8e0ff;
-  text-decoration: none;
-}
-
-#site-footer a:hover {
-  color: #ffffff;
-}
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auralethi</title>
   <style>
-    #main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #121212dd;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-}
-
-#main-nav a {
-  color: #a8e0ff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#main-nav a:hover {
-  color: #ffffff;
-}
-
-    #quote {
-  opacity: 0;
-  transition: opacity 2s ease-in;
-  font-style: italic;
-  font-size: 1.4rem;
-  margin-top: 2.5rem;
-  color: #a8e0ff;
-  animation: pulse 4s ease-in-out infinite;
-}
-
-/* Glowing pulse keyframes */
-@keyframes pulse {
-  0% { text-shadow: 0 0 0px #a8e0ff; }
-  50% { text-shadow: 0 0 12px #a8e0ff; }
-  100% { text-shadow: 0 0 0px #a8e0ff; }
-}
-
+    /* Base styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -73,9 +14,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 4rem;
+      padding: 6rem 1rem 4rem; /* Top pad for navbar, bottom for footer */
       text-align: center;
+      min-height: 100vh;
     }
 
     h1 {
@@ -105,43 +46,96 @@
       font-size: 1.4rem;
       margin-top: 2.5rem;
       color: #a8e0ff;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 0px #a8e0ff; }
+      50% { text-shadow: 0 0 12px #a8e0ff; }
+      100% { text-shadow: 0 0 0px #a8e0ff; }
+    }
+
+    /* Navbar styles */
+    #main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #121212dd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    #main-nav a {
+      color: #a8e0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    #main-nav a:hover {
+      color: #ffffff;
+    }
+
+    /* Footer styles */
+    #site-footer {
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    #site-footer a {
+      color: #a8e0ff;
+      text-decoration: none;
+    }
+
+    #site-footer a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
+  <!-- Inject shared navbar -->
   <div id="navbar-placeholder"></div>
-
-<script>
-  fetch('/shared/navbar.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-placeholder').innerHTML = html;
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('/shared/navbar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('navbar-placeholder').innerHTML = html;
+        });
     });
-</script>
+  </script>
 
+  <!-- Main content -->
   <h1>Auralethi</h1>
   <p>A sanctuary for the misunderstood. A place where healing begins.</p>
-
-  <!-- Resonant quote (fades in on load) -->
   <p id="quote">This is where healing begins.</p>
-
-  <!-- GoFundMe link -->
   <a href="https://www.gofundme.com/f/auralethi" class="button">Support the Launch</a>
 
-  <!-- Script to fade in the quote -->
   <script>
     setTimeout(() => {
       document.getElementById('quote').style.opacity = 1;
     }, 500);
   </script>
-  <div id="footer-placeholder"></div>
-<script>
-  fetch('/shared/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-    });
-</script>
 
+  <!-- Inject shared footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('/shared/footer.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+    });
+  </script>
 </body>
 </html>

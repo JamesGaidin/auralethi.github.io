@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress — Auralethi</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <h1>Our Progress</h1>
+    <p>Auralethi is a living vision—shaped by every step we take together. This page tracks our journey as it unfolds.</p>
+
+    <section>
+      <h2>Milestones</h2>
+      <ul>
+        <li><strong>May 15, 2025:</strong> GoFundMe campaign launched</li>
+        <li><strong>May 15, 2025:</strong> Official site launch with Vision & Founder pages</li>
+        <li><strong>May 2025:</strong> KEFR Radio concept introduced</li>
+        <li><strong>Coming Soon:</strong> First radio segment airs</li>
+        <li><strong>Coming Soon:</strong> Grant application submissions</li>
+        <li><strong>Coming Soon:</strong> Construction planning begins for Valenhold</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What Comes Next</h2>
+      <p>This is just the beginning. New milestones will be added as they happen—funding goals, system launches, community growth, and more.</p>
+      <p>If you want to be part of the journey, <a href="https://gofund.me/9cc4b8a5" target="_blank">support the campaign here</a>.</p>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <p>© Auralethi 2025 • <a href="https://gofund.me/9cc4b8a5" target="_blank">Support the Vision</a></p>
+  </footer>
+
+</body>
+</html>

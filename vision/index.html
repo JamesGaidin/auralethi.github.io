@@ -6,26 +6,26 @@
   <title>Auralethi — The Vision</title>
   <style>
     #site-footer {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid #333;
-}
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #333;
+    }
 
-#site-footer a {
-  color: #a8e0ff;
-  text-decoration: none;
-}
+    #site-footer a {
+      color: #a8e0ff;
+      text-decoration: none;
+    }
 
-#site-footer a:hover {
-  color: #ffffff;
-}
+    #site-footer a:hover {
+      color: #ffffff;
+    }
 
     body {
       margin: 0;
-      padding: 6rem 1.5rem 2rem; /* add top padding for navbar space */
+      padding: 6rem 1.5rem 2rem;
       font-family: Georgia, 'Times New Roman', serif;
       background: #1a1a1a;
       color: #f2f2f2;
@@ -107,16 +107,20 @@
       });
   </script>
 
-  <h1>Auralethi: A Sanctuary for the Misunderstood</h1>
-  <p class="quote">This is where healing begins.</p>
+  <h1>Auralethi: A Sanctuary Where Purpose Finds a Home</h1>
+  <p class="quote">We do not fix—we illuminate. We do not rescue—we remember. We do not control—we co-create.</p>
 
-  <p>I’ve spent most of my life feeling like I didn’t quite fit—like I had something to offer, but nowhere to truly offer it.</p>
+  <p><strong>Auralethi</strong> is a sanctuary where purpose, dignity, and belonging are not earned—they are recognized.</p>
 
-  <p>And I know I’m not alone in that.</p>
+  <p>We envision a world where those who have been overlooked, misunderstood, or cast aside are invited to stand at the center—not the margins—of a thriving, interwoven community.</p>
 
-  <p>There are so many of us—neurodivergent, disabled, misunderstood—who carry brilliance, compassion, creativity... but struggle to find a place where any of it feels welcome.</p>
+  <p>Auralethi exists to awaken the inherent brilliance within every soul, especially those navigating disability, neurodivergence, or systemic exclusion. We are building a living, breathing ecosystem where innovation, healing, and contribution are rooted in compassion—not competition.</p>
 
-  <p>That’s why I’m building Auralethi: a sanctuary for those who’ve been told they don’t belong. A place designed not to fix people, but to honor them.</p>
+  <p>Through adaptive technology, meaningful relationships, and environments designed for real human flourishing, we offer not just housing or care—but home and <em>invitation</em>.</p>
+
+  <p>Auralethi will be the proving ground for a new model of life: one that honors emotional resonance, shared stewardship, and the extraordinary power of being seen.</p>
+
+  <p class="quote">Auralethi is not just a place. It is a <strong>beacon</strong>—and a <strong>beginning</strong>.</p>
 
   <h2>What is Auralethi?</h2>
   <p>Auralethi is more than a nonprofit. It’s a promise.</p>
@@ -154,14 +158,13 @@
     <br />Site live as of May 13, 2025.
   </div>
   <div id="footer-placeholder"></div>
-<script>
-  fetch('/shared/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-    });
-</script>
+  <script>
+    fetch('/shared/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
 
 </body>
 </html>
-

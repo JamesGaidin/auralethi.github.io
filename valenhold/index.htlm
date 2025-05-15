@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valenhold — Auralethi</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("../shared/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <h1>Valenhold</h1>
+    <p><em>“A building, yes—but also a living symbol of what’s possible when care, purpose, and design align.”</em></p>
+
+    <h2>The Heart of Auralethi</h2>
+    <p>Valenhold is Auralethi’s flagship structure—a 14-story, full city-block sanctuary built not just for shelter, but for transformation. Every floor, every room, every choice in its construction is intentional: made to serve a future where inclusion, healing, and contribution are designed into the foundation itself.</p>
+
+    <h2>Structure Overview</h2>
+    <ul>
+      <li><strong>Floors 1–3:</strong>
+        <ul>
+          <li><strong>Floor 1:</strong> Community-facing hub featuring:
+            <ul>
+              <li>Urgent care clinic</li>
+              <li>Daycare and early childhood center</li>
+              <li>Auravine Market (indoor farmer’s market + retail)</li>
+              <li>Small business spaces</li>
+            </ul>
+          </li>
+          <li><strong>Floor 2:</strong> Operations + innovation:
+            <ul>
+              <li>Administrative offices</li>
+              <li>Conference & training rooms</li>
+              <li>Elarin Labs — Research, development, & accessibility testing</li>
+            </ul>
+          </li>
+          <li><strong>Floor 3:</strong> Safety and wellness:
+            <ul>
+              <li>Security offices & surveillance hub</li>
+              <li>Exercise, physical therapy, and wellness rooms</li>
+              <li>Sensory care spaces for neurodivergent needs</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Floors 4–14:</strong> Modular, accessible apartment suites. Each unit is tailored to the resident’s physical, cognitive, and emotional needs using smart design and AI assistance.</li>
+    </ul>
+
+    <h2>The Sky Sanctuary (14th Floor)</h2>
+    <p>The crown of Valenhold is the Sky Sanctuary: a rooftop retreat open to all residents, staff, and guests. It features:</p>
+    <ul>
+      <li>Open-air amphitheater for performances and gatherings</li>
+      <li>Solar panel array powering rooftop systems</li>
+      <li>Meditation dome with ambient soundscapes</li>
+      <li>Garden terraces for grounding and reflection</li>
+    </ul>
+
+    <h2>Sublevels & Infrastructure</h2>
+    <p>Three full sublevels below the structure house:</p>
+    <ul>
+      <li>Underground parking & vehicle access</li>
+      <li>Backup power generators</li>
+      <li>Water recycling and emergency supply storage</li>
+      <li>Server room for AI systems and security protocols</li>
+    </ul>
+
+    <h2>Exterior & Environmental Design</h2>
+    <p>Valenhold breathes. Exterior grow plots wrap the building in a living vertical garden, providing food, shade, and beauty. Rainwater harvesting and geothermal heating further reduce environmental impact. Walking paths, art installations, and accessibility-first landscaping invite all who approach to feel grounded and welcome.</p>
+
+    <h2>A Living System</h2>
+    <p>Valenhold is more than a building. It is a cognitive-architectural body. It houses the Halorin Pulse (body), Lethian Resonance (soul), and Thalorah Flame (spirit). It is designed to respond, adapt, and evolve with the community it protects.</p>
+
+    <p>Every hallway whispers purpose. Every room holds intention. Valenhold doesn’t just stand—it *listens.*</p>
+
+    <p><em>This is where the future begins to take shape.</em></p>
+  </main>
+
+  <footer id="site-footer">
+    <p>© Auralethi 2025 • <a href="https://gofund.me/9cc4b8a5" target="_blank">Support the Vision</a></p>
+  </footer>
+
+</body>
+</html>

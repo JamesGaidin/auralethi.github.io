@@ -11,7 +11,7 @@
   <!-- Navigation -->
   <div id="nav-placeholder"></div>
   <script>
-    fetch("/navbar.html")
+    fetch("/shared/navbar.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("nav-placeholder").innerHTML = data;

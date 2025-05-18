@@ -1,146 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KEFR — Elyndra Frequency Radio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 6rem 1rem 4rem;
-      text-align: center;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEFR — Elyndra Frequency Radio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0e0e0e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6rem 1rem 4rem;
+            text-align: center;
+            min-height: 100vh;
+        }
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-      color: #a8e0ff;
-      animation: glow 3s ease-in-out infinite;
-    }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: #a8e0ff;
+            animation: glow 3s ease-in-out infinite;
+        }
 
-    @keyframes glow {
-      0% { text-shadow: 0 0 0px #a8e0ff; }
-      50% { text-shadow: 0 0 20px #a8e0ff; }
-      100% { text-shadow: 0 0 0px #a8e0ff; }
-    }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 0px #a8e0ff;
+            }
 
-    .subhead {
-      font-size: 1rem;
-      margin-top: 0.25rem;
-      color: #89c4ff;
-      font-style: italic;
-      opacity: 0;
-      animation: fadeIn 2s ease-in 1s forwards;
-    }
+            50% {
+                text-shadow: 0 0 20px #a8e0ff;
+            }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
+            100% {
+                text-shadow: 0 0 0px #a8e0ff;
+            }
+        }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin-top: 1.5rem;
-    }
+        .subhead {
+            font-size: 1rem;
+            margin-top: 0.25rem;
+            color: #89c4ff;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeIn 2s ease-in 1s forwards;
+        }
 
-    .player-wrapper {
-      margin-top: 2.5rem;
-      width: 100%;
-      max-width: 600px;
-    }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
 
-    iframe {
-      border-radius: 12px;
-      width: 100%;
-      height: 352px;
-    }
+        p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-top: 1.5rem;
+        }
 
-    #main-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #121212dd;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-    }
+        .player-wrapper {
+            margin-top: 2.5rem;
+            width: 100%;
+            max-width: 600px;
+        }
 
-    #main-nav a {
-      color: #a8e0ff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+        iframe {
+            border-radius: 12px;
+            width: 100%;
+            height: 352px;
+        }
 
-    #main-nav a:hover {
-      color: #ffffff;
-    }
+        #main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #121212dd;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
 
-    #site-footer {
-      margin-top: 4rem;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
-    }
+            #main-nav a {
+                color: #a8e0ff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
 
-    #site-footer a {
-      color: #a8e0ff;
-      text-decoration: none;
-    }
+                #main-nav a:hover {
+                    color: #ffffff;
+                }
 
-    #site-footer a:hover {
-      color: #ffffff;
-    }
-  </style>
+        #site-footer {
+            margin-top: 4rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+            #site-footer a {
+                color: #a8e0ff;
+                text-decoration: none;
+            }
+
+                #site-footer a:hover {
+                    color: #ffffff;
+                }
+    </style>
 </head>
 <body>
-  <!-- Inject navbar -->
-  <div id="navbar-placeholder"></div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch('/shared/navbar.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('navbar-placeholder').innerHTML = html;
+    <header id="navbar-placeholder" role="banner"></header>
+
+    <main>
+        <h1>KEFR — Elyndra Frequency Radio</h1>
+        <div class="subhead">Now broadcasting from within the heart of Valenhold...</div>
+
+        <p>The resonance channel of Auralethi.<br />Broadcasting our story through the music that shaped it.</p>
+        <p>Each track in our founding sequence holds a memory, a moment, or a frequency that brought this sanctuary to life.</p>
+
+        <div class="player-wrapper">
+            <iframe src="https://open.spotify.com/embed/playlist/4d4ouLnIBZhxmb6yOMsIf1?utm_source=generator"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder" role="contentinfo"></footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('/shared/navbar.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
+
+            fetch('/shared/footer.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('footer-placeholder').innerHTML = html;
+                });
         });
-    });
-  </script>
-
-  <!-- Main content -->
-  <h1>KEFR — Elyndra Frequency Radio</h1>
-  <div class="subhead">Now broadcasting from within the heart of Valenhold...</div>
-
-  <p>The resonance channel of Auralethi.<br />Broadcasting our story through the music that shaped it.</p>
-
-  <p>Each track in our founding sequence holds a memory, a moment, or a frequency that brought this sanctuary to life.</p>
-
-  <div class="player-wrapper">
-    <iframe src="https://open.spotify.com/embed/playlist/4d4ouLnIBZhxmb6yOMsIf1?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-
-  <!-- Inject footer -->
-  <div id="footer-placeholder"></div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch('/shared/footer.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('footer-placeholder').innerHTML = html;
-        });
-    });
-  </script>
+    </script>
 </body>
 </html>

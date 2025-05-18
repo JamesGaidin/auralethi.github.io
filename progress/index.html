@@ -1,147 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auralethi — The Vision</title>
-  <style>
-    #site-footer {
-      margin-top: 4rem;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auralethi — Our Progress</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 6rem 1.5rem 2rem;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #1a1a1a;
+            color: #f2f2f2;
+            line-height: 1.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    #site-footer a {
-      color: #a8e0ff;
-      text-decoration: none;
-    }
+        h1 {
+            font-size: 2.5rem;
+            color: #a8e0ff;
+            margin-bottom: 0.5rem;
+        }
 
-    #site-footer a:hover {
-      color: #ffffff;
-    }
+        h2 {
+            font-size: 1.5rem;
+            color: #66e6d3;
+            margin-top: 2rem;
+        }
 
-    body {
-      margin: 0;
-      padding: 6rem 1.5rem 2rem;
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #1a1a1a;
-      color: #f2f2f2;
-      line-height: 1.7;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        p {
+            margin-bottom: 1.25rem;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #a8e0ff;
-      margin-bottom: 0.5rem;
-    }
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
 
-    h2 {
-      font-size: 1.5rem;
-      color: #66e6d3;
-      margin-top: 2rem;
-    }
+        #main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #121212dd;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
 
-    p {
-      margin-bottom: 1.25rem;
-    }
+            #main-nav a {
+                color: #a8e0ff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
 
-    .quote {
-      font-style: italic;
-      color: #cddff7;
-      margin: 2rem 0;
-      font-size: 1.1rem;
-    }
+                #main-nav a:hover {
+                    color: #ffffff;
+                }
 
-    ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1.25rem;
-    }
+        #site-footer {
+            margin-top: 4rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #333;
+        }
 
-    .footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
+            #site-footer a {
+                color: #a8e0ff;
+                text-decoration: none;
+            }
 
-    #main-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #121212dd;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-    }
-
-    #main-nav a {
-      color: #a8e0ff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    #main-nav a:hover {
-      color: #ffffff;
-    }
-  </style>
+                #site-footer a:hover {
+                    color: #ffffff;
+                }
+    </style>
 </head>
 <body>
-  <div id="navbar-placeholder"></div>
+    <header id="navbar-placeholder" role="banner"></header>
 
-  <script>
-    fetch('/shared/navbar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('navbar-placeholder').innerHTML = html;
-      });
-  </script>
+    <main>
+        <h1>Our Progress</h1>
+        <p>Auralethi is a living vision—shaped by every step we take together. This page tracks our journey as it unfolds.</p>
 
-    <h1>Our Progress</h1>
-    <p>Auralethi is a living vision—shaped by every step we take together. This page tracks our journey as it unfolds.</p>
+        <section>
+            <h2>Milestones</h2>
+            <ul>
+                <li><strong>May 13, 2025:</strong> GoFundMe campaign launched</li>
+                <li><strong>May 15, 2025:</strong> Official site launch with Vision & Founder pages</li>
+                <li><strong>May 2025:</strong> KEFR Radio concept introduced</li>
+                <li><strong>Coming Soon:</strong> First radio segment airs</li>
+                <li><strong>Coming Soon:</strong> Grant application submissions</li>
+                <li><strong>Coming Soon:</strong> Construction planning begins for Valenhold</li>
+            </ul>
+        </section>
 
-    <section>
-      <h2>Milestones</h2>
-      <ul>
-        <li><strong>May 13, 2025:</strong> GoFundMe campaign launched</li>
-        <li><strong>May 15, 2025:</strong> Official site launch with Vision & Founder pages</li>
-        <li><strong>May 2025:</strong> KEFR Radio concept introduced</li>
-        <li><strong>Coming Soon:</strong> First radio segment airs</li>
-        <li><strong>Coming Soon:</strong> Grant application submissions</li>
-        <li><strong>Coming Soon:</strong> Construction planning begins for Valenhold</li>
-      </ul>
-    </section>
+        <section>
+            <h2>What Comes Next</h2>
+            <p>This is just the beginning. New milestones will be added as they happen—funding goals, system launches, community growth, and more.</p>
+            <p>If you want to be part of the journey, <a href="https://gofund.me/9cc4b8a5" target="_blank">support the campaign here</a>.</p>
+        </section>
+    </main>
 
-    <section>
-      <h2>What Comes Next</h2>
-      <p>This is just the beginning. New milestones will be added as they happen—funding goals, system launches, community growth, and more.</p>
-      <p>If you want to be part of the journey, <a href="https://gofund.me/9cc4b8a5" target="_blank">support the campaign here</a>.</p>
-    </section>
-  </main>
+    <footer id="footer-placeholder" role="contentinfo"></footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('/shared/navbar.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
 
-  <div class="footer">
-    Written and shared with love by James Dayson.  
-    <br />Site live as of May 13, 2025.
-  </div>
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('/shared/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-      });
-  </script>
-
+            fetch('/shared/footer.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('footer-placeholder').innerHTML = html;
+                });
+        });
+    </script>
 </body>
 </html>

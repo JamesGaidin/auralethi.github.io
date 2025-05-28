@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\about",
+    "\\kefr",
+    "\\progress",
     "\\shared",
-    "\\valenhold"
+    "\\valenhold",
+    "\\vision"
   ],
+  "SelectedNode": "\\progress\\index.html",
   "PreviewInSolutionExplorer": false
 }

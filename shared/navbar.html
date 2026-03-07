@@ -1,9 +1,74 @@
-<nav id="main-nav" role="navigation" aria-label="Main navigation">
-    <a href="/">Home</a>
-    <a href="/kefr">KEFR</a>
-    <a href="/vision">Vision</a>
-    <a href="/valenhold">Valenhold</a>
-    <a href="/progress">Progress</a>
-    <a href="/about">About</a>
-    <a href="https://gofund.me/9cc4b8a5" target="_blank">Donate</a>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #0d0f14; --glow: #7ec8e3; --teal: #33c1b1;
+    --teal-dim: #1e7a70; --text-dim: #8a96a8;
+  }
+  nav#main-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    background: linear-gradient(to bottom, rgba(13,15,20,0.97), transparent);
+    backdrop-filter: blur(12px);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--glow);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--glow); }
+  .nav-donate {
+    background: transparent;
+    border: 1px solid var(--teal-dim);
+    color: var(--teal) !important;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s !important;
+  }
+  .nav-donate:hover {
+    background: var(--teal) !important;
+    color: var(--bg) !important;
+    border-color: var(--teal) !important;
+  }
+  @media (max-width: 768px) {
+    nav#main-nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 0.75rem; }
+  }
+</style>
+<nav id="main-nav">
+  <a href="/" class="nav-logo">Auralethi</a>
+  <ul class="nav-links">
+    <li><a href="/vision">Vision</a></li>
+    <li><a href="/kefr">KEFR Radio</a></li>
+    <li><a href="/valenhold">Valenhold</a></li>
+    <li><a href="/progress">Progress</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="https://gofund.me/9cc4b8a5" target="_blank" class="nav-donate">Support</a></li>
+  </ul>
 </nav>

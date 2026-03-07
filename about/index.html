@@ -1,163 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auralethi — About the Founder</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 6rem 1.5rem 2rem;
-            font-family: Georgia, 'Times New Roman', serif;
-            background: #1a1a1a;
-            color: #f2f2f2;
-            line-height: 1.7;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Founder — Auralethi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f14; --bg2: #11141c;
+      --glow: #7ec8e3; --teal: #33c1b1; --teal-dim: #1e7a70;
+      --text: #e8edf5; --text-dim: #8a96a8; --text-mute: #4a5568;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #a8e0ff;
-            margin-bottom: 0.5rem;
-        }
+    /* Hero */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 10rem 2rem 5rem;
+      max-width: 780px; margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 300; line-height: 1.1;
+      color: var(--text); margin-bottom: 1.5rem;
+    }
+    h1 em { font-style: italic; color: var(--glow); }
 
-        h2 {
-            font-size: 1.5rem;
-            color: #66e6d3;
-            margin-top: 2rem;
-        }
+    .opening-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic; color: var(--text-dim);
+      line-height: 1.55; border-left: 2px solid var(--teal);
+      padding-left: 1.5rem; margin-bottom: 3rem;
+    }
 
-        p {
-            margin-bottom: 1.25rem;
-        }
+    /* Body content */
+    .content {
+      position: relative; z-index: 1;
+      max-width: 680px; margin: 0 auto;
+      padding: 0 2rem 2rem;
+    }
+    .content p {
+      font-size: 1rem; color: var(--text-dim);
+      line-height: 1.85; margin-bottom: 1.5rem;
+    }
+    .content p strong { color: var(--text); font-weight: 500; }
+    .content p em { font-style: italic; color: var(--glow); }
 
-        em {
-            color: #cddff7;
-        }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 300; color: var(--text);
+      margin: 3rem 0 1rem; line-height: 1.2;
+    }
+    h2 em { font-style: italic; color: var(--glow); }
 
-        ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.25rem;
-        }
+    .divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(to right, transparent, var(--teal), transparent);
+      margin: 2.5rem 0;
+    }
 
-        #main-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #121212dd;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1rem;
-            z-index: 1000;
-            backdrop-filter: blur(8px);
-        }
+    /* Crisis note */
+    .crisis-note {
+      background: var(--bg2);
+      border: 1px solid rgba(126,200,227,0.12);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 10px 10px 0;
+      padding: 1.75rem 2rem;
+      margin: 2.5rem 0;
+    }
+    .crisis-note p {
+      margin-bottom: 0.75rem; font-size: 0.95rem;
+    }
+    .crisis-note p:last-child { margin-bottom: 0; }
+    .crisis-note strong { color: var(--glow) !important; }
 
-            #main-nav a {
-                color: #a8e0ff;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.3s;
-            }
+    /* Closing */
+    .closing {
+      text-align: center;
+      padding: 5rem 2rem;
+      position: relative; z-index: 1;
+    }
+    .closing-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 300; font-style: italic;
+      color: var(--text); max-width: 540px;
+      margin: 0 auto 2rem; line-height: 1.45;
+    }
+    .closing-text em { color: var(--glow); }
+    .btn-primary {
+      display: inline-block; background: var(--teal);
+      color: var(--bg); padding: 0.85rem 2rem;
+      border-radius: 6px; text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.04em; transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background: var(--glow); transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(126,200,227,0.2);
+    }
 
-                #main-nav a:hover {
-                    color: #ffffff;
-                }
-
-        #site-footer {
-            margin-top: 4rem;
-            padding: 2rem 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-            border-top: 1px solid #333;
-        }
-
-            #site-footer a {
-                color: #a8e0ff;
-                text-decoration: none;
-            }
-
-                #site-footer a:hover {
-                    color: #ffffff;
-                }
-    </style>
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+  </style>
 </head>
 <body>
-    <header id="navbar-placeholder" role="banner"></header>
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('/shared/navbar.html').then(r=>r.text()).then(h=>{
+      document.getElementById('navbar-placeholder').innerHTML = h;
+    });
+  </script>
 
-    <main>
-        <h1>About the Founder</h1>
+  <div class="hero">
+    <p class="eyebrow reveal">The founder</p>
+    <h1 class="reveal reveal-delay-1">I didn't set out to build<br>a movement.<br><em>I needed somewhere to belong.</em></h1>
+    <blockquote class="opening-quote reveal reveal-delay-2">
+      "When I couldn't find that place… I built it."
+    </blockquote>
+  </div>
 
-        <p><em>“I didn’t set out to build a movement—I just needed a place to belong. And when I couldn’t find one… I built it.”</em></p>
+  <div class="content">
+    <p class="reveal">
+      It started sometime around 8th grade. That strange in-between time when everything shifts —
+      bodies, friendships, identities. I remember looking around at the social circles forming,
+      watching people fall into place… and realizing I didn't. Not really.
+    </p>
+    <p class="reveal">
+      There were a few people I truly resonated with. But most of the time, it felt like
+      I was watching life from just outside the edge. That's when I first knew:
+      <em>I saw the world differently.</em> And even then, I wondered if maybe that difference
+      wasn't a flaw — but a sign.
+    </p>
+    <p class="reveal">
+      They say like energies find each other. I've watched that play out my whole life.
+      I've always found myself surrounded by people who are neurodivergent, people with disabilities,
+      people the system wasn't built for. Over time, I stopped thinking that was a coincidence.
+      <strong>We find each other because we need each other.</strong>
+    </p>
 
-        <p>It started sometime around 8th grade. That strange, in-between time when everything shifts—bodies, friendships, identities. I remember looking around at the social circles forming, seeing how people seemed to fall into place… and realizing I didn’t. Not really. There were a few people I truly resonated with, but most of the time, it felt like I was watching life from just outside the edge. That’s when I first knew—I saw the world differently. And even back then, I wondered if maybe that difference wasn’t a flaw… but a sign.</p>
+    <div class="divider reveal"></div>
 
-        <p>They say like energies find each other—and I’ve seen that play out my whole life. I’ve always found myself surrounded by people who are neurodivergent, people with disabilities, people the system wasn’t built for. And over time, I stopped thinking that was a coincidence. We find each other because we <em>need</em> each other.</p>
+    <p class="reveal">
+      Lately, I've just had enough. I'm tired of watching people I care about struggle
+      through a world that doesn't make space for them. I'm tired of systems that reward
+      pretending over truth, silence over struggle, burnout over balance.
+    </p>
+    <p class="reveal">
+      Sure, I can mask enough to function. A lot of us can.<br>
+      But <strong>should we have to?</strong>
+    </p>
+    <p class="reveal">
+      That constant pressure to shrink yourself, reshape yourself, hide the truth of who you are —
+      it doesn't create progress. It creates pain. It creates damage.
+      That's why Auralethi exists. <em>Because it's time for something that actually works — for us.</em>
+    </p>
 
-        <p>Lately, though… I’ve just had enough. I’m tired of watching people I care about struggle through a world that doesn’t make space for them. I’m tired of systems that reward pretending over truth, silence over struggle, burnout over balance.</p>
+    <h2 class="reveal">What Auralethi <em>means</em> to me</h2>
+    <p class="reveal reveal-delay-1">
+      To me, Auralethi is one word: <strong>Humanity.</strong> Not the version
+      we're told to fit into — but the one we feel when we're truly seen, heard,
+      and allowed to exist as we are.
+    </p>
 
-        <p>
-            Sure, I can mask enough to function. A lot of us can.<br />
-            But <strong>should</strong> we have to?
-        </p>
+    <h2 class="reveal">If you're standing at the edge</h2>
 
-        <p>That constant pressure to shrink yourself, reshape yourself, hide the truth of who you are—it doesn’t create progress. It creates pain. It creates damage.</p>
+    <div class="crisis-note reveal reveal-delay-1">
+      <p><strong>Don't take that step. Please.</strong></p>
+      <p>I know how heavy it gets. How tired. How endless it feels.</p>
+      <p>
+        But there is hope. And you are not alone. There are more of us gathering every day —
+        people like you, like me. People who feel too much, who think too deeply,
+        who've been told they don't belong.
+      </p>
+      <p>
+        We do belong. And the world needs us — more than it knows.
+        <strong>Just hold on a little longer. We're building something real.</strong>
+      </p>
+      <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-mute);">
+        If you need support right now, please reach out to the
+        <a href="https://988lifeline.org" target="_blank" style="color: var(--teal); text-decoration: none;">988 Suicide & Crisis Lifeline</a>
+        (call or text 988 in the US).
+      </p>
+    </div>
 
-        <p>That’s why Auralethi exists. Because it’s time for something that actually works—for <em>us</em>.</p>
+    <h2 class="reveal">One last thing</h2>
+    <p class="reveal reveal-delay-1">
+      What I wish people understood about me is simple: I really do want to see you.
+      Not the mask. Not the version you think I want.
+    </p>
+    <p class="reveal reveal-delay-2">
+      <strong>You.</strong> All of you. At your core.
+    </p>
+    <p class="reveal">
+      It's not about me at all. It's about you.<br>
+      And if you're reading this… maybe you were meant to be part of what comes next.
+    </p>
+  </div>
 
-        <h2>What Auralethi Means to Me</h2>
-        <p>
-            To me, Auralethi is one word: <strong>Humanity.</strong><br />
-            Not the version we’re told to fit into—but the one we <em>feel</em> when we’re truly seen, heard, and allowed to exist as we are.
-        </p>
+  <div class="closing">
+    <p class="closing-text reveal">
+      "If you're reading this… <em>maybe you were meant to be here.</em>"
+    </p>
+    <a href="https://gofund.me/9cc4b8a5" target="_blank" class="btn-primary reveal reveal-delay-1">
+      Support what we're building →
+    </a>
+  </div>
 
-        <h2>If You’re Standing at the Edge</h2>
-        <p>
-            <strong>Don’t take that step. Please.</strong><br />
-            I know how heavy it gets—how tired, how endless.<br />
-            But there <em>is</em> hope. And you’re not alone.
-        </p>
-
-        <p>There are more of us gathering every day—people like you, like me. People who feel too much, who think too deeply, who’ve been told they don’t belong.</p>
-
-        <p>But we <em>do</em> belong. And the world needs us—more than it knows.</p>
-
-        <p>Just hold on a little longer. We’re building something now. For real.</p>
-
-        <h2>One Last Thing</h2>
-        <p>
-            What I wish people understood about me is simple:<br />
-            I really do want to see you.<br />
-            Not the mask. Not the version you think I want. <br />
-            <strong>You.</strong> All of you. At your core.
-        </p>
-
-        <p>
-            It’s not about me at all. It’s about you.<br />
-            And if you're reading this… maybe you were meant to be part of what comes next.
-        </p>
-    </main>
-
-    <footer id="footer-placeholder" role="contentinfo"></footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('/shared/navbar.html')
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById('navbar-placeholder').innerHTML = html;
-                });
-
-            fetch('/shared/footer.html')
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById('footer-placeholder').innerHTML = html;
-                });
-        });
-    </script>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/shared/footer.html').then(r=>r.text()).then(h=>{
+      document.getElementById('footer-placeholder').innerHTML = h;
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>

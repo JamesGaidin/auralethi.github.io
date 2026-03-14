@@ -26,49 +26,42 @@
     color: var(--glow);
     letter-spacing: 0.08em;
     text-decoration: none;
+    flex-shrink: 0;
   }
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0; padding: 0;
   }
   .nav-links a {
     color: var(--text-dim);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--glow); }
-  .nav-donate {
-    background: transparent;
-    border: 1px solid var(--teal-dim);
-    color: var(--teal) !important;
-    padding: 0.4rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s !important;
-  }
-  .nav-donate:hover {
-    background: var(--teal) !important;
-    color: var(--bg) !important;
-    border-color: var(--teal) !important;
-  }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     nav#main-nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 0.75rem; }
+    .nav-links a { font-size: 0.72rem; }
+  }
+  @media (max-width: 640px) {
+    .nav-links { gap: 0.6rem; }
+    .nav-links a { font-size: 0.62rem; letter-spacing: 0.03em; }
   }
 </style>
 <nav id="main-nav">
   <a href="/" class="nav-logo">Auralethi</a>
   <ul class="nav-links">
-    <li><a href="/vision">Vision</a></li>
-    <li><a href="/kefr">KEFR Radio</a></li>
-    <li><a href="/valenhold">Valenhold</a></li>
-    <li><a href="/progress">Progress</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
-    <li><a href="https://gofund.me/9cc4b8a5" target="_blank" class="nav-donate">Support</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/progress">Progress</a></li>
+    <li><a href="/vision">Vision</a></li>
+    <li><a href="/get-involved">Get Involved</a></li>
   </ul>
 </nav>

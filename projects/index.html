@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Auralethi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f14; --bg2: #11141c; --bg3: #161a24;
+      --glow: #7ec8e3; --teal: #33c1b1; --teal-dim: #1e7a70;
+      --text: #e8edf5; --text-dim: #8a96a8; --text-mute: #4a5568;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      padding: 9rem 2rem 0;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+
+    .page-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+      padding-bottom: 6rem;
+    }
+
+    .page-label {
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300; line-height: 1.1;
+      color: var(--text); margin-bottom: 1rem;
+    }
+
+    .page-intro {
+      font-size: 1rem; color: var(--text-dim);
+      line-height: 1.8; max-width: 580px;
+      margin-bottom: 1rem;
+    }
+
+    .phase-note {
+      font-size: 0.85rem;
+      color: var(--text-mute);
+      margin-bottom: 4rem;
+    }
+
+    /* Project cards */
+    .project-card {
+      background: var(--bg2);
+      border: 1px solid rgba(126,200,227,0.08);
+      border-radius: 14px;
+      padding: 2.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.35s;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(to right, transparent, var(--teal-dim), transparent);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+
+    .project-card:hover { border-color: rgba(126,200,227,0.2); }
+    .project-card:hover::before { opacity: 1; }
+
+    .project-status {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(51,193,177,0.1);
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .project-status.future {
+      color: var(--text-mute);
+      background: rgba(74,85,104,0.15);
+    }
+
+    .project-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      color: var(--glow);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .project-body p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .project-features {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .project-features li {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .project-features li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--teal-dim);
+    }
+
+    .project-link {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--teal-dim);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .project-link:hover {
+      color: var(--glow);
+      border-color: var(--glow);
+    }
+
+    .note-text {
+      font-size: 0.88rem;
+      color: var(--text-mute);
+      border-left: 2px solid var(--teal-dim);
+      padding-left: 1rem;
+      margin: 1rem 0 1.25rem;
+      line-height: 1.7;
+    }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('/shared/navbar.html').then(r=>r.text()).then(h=>{
+      document.getElementById('navbar-placeholder').innerHTML = h;
+    });
+  </script>
+
+  <div class="page-inner">
+    <p class="page-label reveal">Auralethi</p>
+    <h1 class="reveal reveal-delay-1">Projects</h1>
+    <p class="page-intro reveal reveal-delay-2">
+      Auralethi is developing several connected initiatives.
+      Each project represents one layer of a larger system.
+    </p>
+    <p class="phase-note reveal reveal-delay-2">
+      The organization is currently in Phase 1 — Foundation, so most projects are in design or planning.
+    </p>
+
+    <!-- Hollarin -->
+    <div class="project-card reveal">
+      <div class="project-status">Phase 1 — Design</div>
+      <div class="project-name">Hollarin AI Companion</div>
+      <div class="project-body">
+        <p>Human-centered AI support for memory, organization, and daily life.</p>
+        <p>Planned features:</p>
+        <ul class="project-features">
+          <li>task guidance</li>
+          <li>reminders</li>
+          <li>executive function support</li>
+          <li>structured assistance</li>
+          <li>ethical AI constraints</li>
+        </ul>
+        <p>Prototype work will begin after the architecture is stable.</p>
+      </div>
+    </div>
+
+    <!-- CortexOS -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-status">Phase 1 — Internal architecture</div>
+      <div class="project-name">CortexOS Architecture</div>
+      <div class="project-body">
+        <p>CortexOS is the internal architecture being designed to support future AI tools.</p>
+        <p class="note-text">
+          It is not a product. It is the framework used to build systems like the Hollarin AI Companion.
+        </p>
+        <p>Current work includes:</p>
+        <ul class="project-features">
+          <li>layered architecture design</li>
+          <li>testing AI support models</li>
+          <li>defining constraints</li>
+          <li>documentation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KEFR -->
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-status">Phase 1 — Early development</div>
+      <div class="project-name">KEFR Radio</div>
+      <div class="project-body">
+        <p>
+          KEFR Radio is a small public media channel used to share project updates, music,
+          ideas, and development logs while the organization is still in early phases.
+        </p>
+        <p>
+          It currently exists as a lightweight online channel and will expand as the project grows.
+        </p>
+        <a href="/kefr" class="project-link">Visit KEFR Radio →</a>
+      </div>
+    </div>
+
+    <!-- Valenhold -->
+    <div class="project-card reveal reveal-delay-3">
+      <div class="project-status future">Future phase</div>
+      <div class="project-name">Valenhold</div>
+      <div class="project-body">
+        <p>
+          Valenhold is a long-term campus concept for a support-focused community environment.
+        </p>
+        <p>
+          It belongs to later phases of the roadmap and is not part of current development.
+        </p>
+        <a href="/valenhold" class="project-link">Read the concept →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/shared/footer.html').then(r=>r.text()).then(h=>{
+      document.getElementById('footer-placeholder').innerHTML = h;
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

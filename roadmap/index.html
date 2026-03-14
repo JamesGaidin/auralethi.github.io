@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap — Auralethi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f14; --bg2: #11141c; --bg3: #161a24;
+      --glow: #7ec8e3; --teal: #33c1b1; --teal-dim: #1e7a70;
+      --text: #e8edf5; --text-dim: #8a96a8; --text-mute: #4a5568;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      padding: 9rem 2rem 0;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+
+    .page-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+      padding-bottom: 6rem;
+    }
+
+    .page-label {
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300; line-height: 1.1;
+      color: var(--text); margin-bottom: 1rem;
+    }
+
+    .page-intro {
+      font-size: 1rem; color: var(--text-dim);
+      line-height: 1.8; max-width: 580px;
+      margin-bottom: 4rem;
+    }
+
+    /* Phase list */
+    .phase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .phase-item {
+      background: var(--bg2);
+      border: 1px solid rgba(126,200,227,0.07);
+      border-radius: 12px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 2rem;
+      align-items: start;
+      transition: border-color 0.3s;
+    }
+
+    .phase-item:hover {
+      border-color: rgba(126,200,227,0.18);
+    }
+
+    .phase-item.current {
+      border-color: rgba(51,193,177,0.22);
+      background: rgba(51,193,177,0.03);
+    }
+
+    .phase-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .phase-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: rgba(126,200,227,0.12);
+      line-height: 1;
+    }
+
+    .phase-item.current .phase-num {
+      color: rgba(51,193,177,0.25);
+    }
+
+    .phase-badge {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      display: inline-block;
+      background: rgba(51,193,177,0.12);
+      color: var(--teal);
+      width: fit-content;
+    }
+
+    .phase-badge.future {
+      background: rgba(74,85,104,0.15);
+      color: var(--text-mute);
+    }
+
+    .phase-right {}
+
+    .phase-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--glow);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .phase-item.current .phase-title {
+      color: var(--teal);
+    }
+
+    .phase-desc {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+
+    /* Closing note */
+    .closing-note {
+      margin-top: 3rem;
+      padding: 2rem;
+      border-top: 1px solid rgba(126,200,227,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .closing-note p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+
+    .closing-note .note-em {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 580px) {
+      .phase-item { grid-template-columns: 1fr; gap: 0.75rem; }
+      .phase-num { font-size: 1.8rem; }
+    }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+    .reveal-delay-5 { transition-delay: 0.4s; }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('/shared/navbar.html').then(r=>r.text()).then(h=>{
+      document.getElementById('navbar-placeholder').innerHTML = h;
+    });
+  </script>
+
+  <div class="page-inner">
+    <p class="page-label reveal">Auralethi</p>
+    <h1 class="reveal reveal-delay-1">Roadmap</h1>
+    <p class="page-intro reveal reveal-delay-2">
+      Each phase must be stable before the next begins.
+      There is no fixed timeline.
+    </p>
+
+    <div class="phase-list">
+
+      <div class="phase-item current reveal">
+        <div class="phase-left">
+          <div class="phase-num">1</div>
+          <div class="phase-badge">Current</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-title">Foundation</div>
+          <p class="phase-desc">Organization, architecture, funding, documentation</p>
+        </div>
+      </div>
+
+      <div class="phase-item reveal reveal-delay-1">
+        <div class="phase-left">
+          <div class="phase-num">2</div>
+          <div class="phase-badge future">Future</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-title">Prototype</div>
+          <p class="phase-desc">First AI tools, testing, early systems</p>
+        </div>
+      </div>
+
+      <div class="phase-item reveal reveal-delay-2">
+        <div class="phase-left">
+          <div class="phase-num">3</div>
+          <div class="phase-badge future">Future</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-title">Pilot Programs</div>
+          <p class="phase-desc">Real-world testing and small deployments</p>
+        </div>
+      </div>
+
+      <div class="phase-item reveal reveal-delay-3">
+        <div class="phase-left">
+          <div class="phase-num">4</div>
+          <div class="phase-badge future">Future</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-title">Community Development</div>
+          <p class="phase-desc">Shared environments and support spaces</p>
+        </div>
+      </div>
+
+      <div class="phase-item reveal reveal-delay-4">
+        <div class="phase-left">
+          <div class="phase-num">5</div>
+          <div class="phase-badge future">Future</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-title">Valenhold</div>
+          <p class="phase-desc">Full campus concept</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="closing-note reveal">
+      <p>Each phase must be stable before the next begins.</p>
+      <p class="note-em">There is no fixed timeline.</p>
+    </div>
+
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/shared/footer.html').then(r=>r.text()).then(h=>{
+      document.getElementById('footer-placeholder').innerHTML = h;
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

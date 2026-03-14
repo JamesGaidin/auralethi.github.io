@@ -12,7 +12,6 @@
       --bg: #0d0f14; --bg2: #11141c; --bg3: #161a24;
       --glow: #7ec8e3; --teal: #33c1b1; --teal-dim: #1e7a70;
       --text: #e8edf5; --text-dim: #8a96a8; --text-mute: #4a5568;
-      --gold: #c9a84c;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -32,11 +31,18 @@
       max-width: 780px;
       margin: 0 auto;
       position: relative; z-index: 1;
+      padding-bottom: 4rem;
     }
     .page-label {
       font-size: 0.7rem; letter-spacing: 0.2em;
       text-transform: uppercase; color: var(--teal);
       margin-bottom: 1rem;
+    }
+    .updated {
+      font-size: 0.78rem;
+      color: var(--text-mute);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
     }
     h1 {
       font-family: 'Cormorant Garamond', serif;
@@ -51,129 +57,97 @@
       margin-bottom: 4rem;
     }
 
-    /* Timeline */
-    .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before {
-      content: '';
-      position: absolute; left: 0; top: 8px; bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, var(--teal), rgba(51,193,177,0.1), transparent);
-    }
-
-    .timeline-group { margin-bottom: 3rem; }
-
-    .timeline-year {
-      font-size: 0.7rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--teal);
-      margin-bottom: 1.25rem;
-      position: relative;
-    }
-    .timeline-year::before {
-      content: '';
-      position: absolute; left: -2.5rem; top: 50%;
-      transform: translateY(-50%);
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      background: var(--teal);
-      box-shadow: 0 0 12px rgba(51,193,177,0.6);
-    }
-
-    .milestone {
-      display: flex; gap: 1.5rem;
-      padding: 1.25rem 1.5rem;
+    /* Status sections */
+    .status-group {
+      margin-bottom: 3rem;
+      padding: 2rem;
       background: var(--bg2);
       border: 1px solid rgba(126,200,227,0.07);
-      border-radius: 10px;
-      margin-bottom: 0.75rem;
-      transition: all 0.3s;
-      position: relative;
+      border-radius: 12px;
+      transition: border-color 0.3s;
     }
-    .milestone::before {
-      content: '';
-      position: absolute; left: -2rem; top: 50%;
-      transform: translateY(-50%);
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--bg3);
-      border: 1px solid var(--teal-dim);
-    }
-    .milestone:hover {
-      border-color: rgba(126,200,227,0.18);
-      transform: translateX(4px);
+    .status-group:hover {
+      border-color: rgba(126,200,227,0.15);
     }
 
-    .milestone-date {
-      flex-shrink: 0;
-      font-size: 0.75rem;
-      color: var(--text-mute);
-      min-width: 80px;
-      padding-top: 0.15rem;
-      letter-spacing: 0.04em;
+    .status-group-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--glow);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(126,200,227,0.1);
     }
-    .milestone-content { flex: 1; }
-    .milestone-title {
+
+    .status-items {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .status-items li {
       font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text);
-      margin-bottom: 0.3rem;
-    }
-    .milestone-desc {
-      font-size: 0.85rem;
       color: var(--text-dim);
       line-height: 1.6;
+      padding-left: 1.5rem;
+      position: relative;
     }
 
-    .badge {
-      display: inline-block;
-      font-size: 0.65rem; letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.5rem;
-      border-radius: 3px;
-      margin-left: 0.5rem;
-      vertical-align: middle;
+    .status-items li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-mute);
     }
-    .badge-done { background: rgba(51,193,177,0.12); color: var(--teal); }
-    .badge-soon { background: rgba(201,168,76,0.12); color: var(--gold); }
-    .badge-active { background: rgba(126,200,227,0.1); color: var(--glow); }
 
-    /* Next horizon */
-    .horizon {
-      margin: 4rem 0;
-      padding: 2.5rem;
+    /* Recent work */
+    .recent-group {
+      margin-bottom: 3rem;
+      padding: 2rem;
       background: var(--bg2);
-      border: 1px solid rgba(126,200,227,0.1);
-      border-radius: 14px;
-      position: relative; overflow: hidden;
+      border: 1px solid rgba(126,200,227,0.07);
+      border-radius: 12px;
     }
-    .horizon::after {
-      content: '';
-      position: absolute; right: -60px; bottom: -60px;
-      width: 250px; height: 250px;
-      background: radial-gradient(ellipse, rgba(126,200,227,0.06) 0%, transparent 70%);
-      pointer-events: none;
+
+    .recent-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
     }
-    .horizon h2 {
+
+    .recent-list li {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .recent-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+    }
+
+    /* Closing */
+    .closing {
+      text-align: center;
+      padding: 3rem 2rem 5rem;
+      position: relative; z-index: 1;
+    }
+    .closing-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem; font-weight: 300;
-      color: var(--text); margin-bottom: 0.75rem;
-    }
-    .horizon h2 em { font-style: italic; color: var(--glow); }
-    .horizon p {
-      font-size: 0.9rem; color: var(--text-dim);
-      line-height: 1.75; margin-bottom: 1.5rem;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--teal); color: var(--bg);
-      padding: 0.75rem 1.75rem; border-radius: 6px;
-      text-decoration: none; font-size: 0.875rem;
-      font-weight: 500; letter-spacing: 0.04em;
-      transition: all 0.3s;
-    }
-    .btn-primary:hover {
-      background: var(--glow);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(126,200,227,0.2);
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 300; font-style: italic;
+      color: var(--text-dim);
+      line-height: 1.5;
     }
 
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -191,115 +165,73 @@
   </script>
 
   <div class="page-inner">
-    <p class="page-label reveal">Where we stand</p>
-    <h1 class="reveal reveal-delay-1">This is a <em>living</em> vision.<br>Here's how it's growing.</h1>
+    <p class="updated reveal">Last updated: March 2026</p>
+    <p class="page-label reveal">Phase 1 — Foundation (Current)</p>
+    <h1 class="reveal reveal-delay-1">Progress</h1>
     <p class="page-intro reveal reveal-delay-2">
-      Auralethi didn't start finished. It started real. Every milestone below
-      is a step from idea to something the world can actually touch.
+      This page tracks real development status.
+      Work is focused on building the foundation before prototypes begin.
     </p>
 
-    <div class="timeline">
-
-      <!-- 2025 Foundations -->
-      <div class="timeline-group reveal">
-        <div class="timeline-year">May 2025 — Foundations</div>
-
-        <div class="milestone">
-          <div class="milestone-date">May 13</div>
-          <div class="milestone-content">
-            <div class="milestone-title">GoFundMe campaign launched <span class="badge badge-done">Done</span></div>
-            <div class="milestone-desc">First public step. The mission went live.</div>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-date">May 15</div>
-          <div class="milestone-content">
-            <div class="milestone-title">Official site launch <span class="badge badge-done">Done</span></div>
-            <div class="milestone-desc">Vision, Founder, and core pages go live at auralethi.org.</div>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-date">May 2025</div>
-          <div class="milestone-content">
-            <div class="milestone-title">KEFR Radio concept introduced <span class="badge badge-done">Done</span></div>
-            <div class="milestone-desc">Elyndra Frequency Radio — the resonance channel of Auralethi — takes shape. Founding playlist published.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2025 Theory -->
-      <div class="timeline-group reveal">
-        <div class="timeline-year">May–June 2025 — Architecture & Governance</div>
-
-        <div class="milestone">
-          <div class="milestone-date">May 2025</div>
-          <div class="milestone-content">
-            <div class="milestone-title">CortexOS architecture begins <span class="badge badge-done">Done</span></div>
-            <div class="milestone-desc">A layered cognitive architecture — the theoretical backbone informing Auralethi's design philosophy and community systems — reaches its first formal structure.</div>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-date">Jun 2025</div>
-          <div class="milestone-content">
-            <div class="milestone-title">Codex Auravelithium reaches 56 laws <span class="badge badge-done">Done</span></div>
-            <div class="milestone-desc">The living governance framework for Auralethi. 56 principles shaping how decisions are made, how community is built, and how the mission stays true.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Now -->
-      <div class="timeline-group reveal">
-        <div class="timeline-year">2026 — Building in Public</div>
-
-        <div class="milestone">
-          <div class="milestone-date">Mar 2026</div>
-          <div class="milestone-content">
-            <div class="milestone-title">Site overhaul underway <span class="badge badge-active">Active</span></div>
-            <div class="milestone-desc">Full redesign of auralethi.org to better communicate the mission to first-time visitors.</div>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-date">Soon</div>
-          <div class="milestone-content">
-            <div class="milestone-title">501(c)(3) nonprofit filing <span class="badge badge-soon">Next</span></div>
-            <div class="milestone-desc">Legal establishment of Auralethi as a registered nonprofit — the gateway to grant funding.</div>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-date">Soon</div>
-          <div class="milestone-content">
-            <div class="milestone-title">Grant application submissions begin <span class="badge badge-soon">Next</span></div>
-            <div class="milestone-desc">First round of foundation and community grant applications targeting housing, neurodivergent care, and innovation.</div>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-date">Soon</div>
-          <div class="milestone-content">
-            <div class="milestone-title">KEFR first broadcast segment <span class="badge badge-soon">Next</span></div>
-            <div class="milestone-desc">Moving from playlist to actual radio. First produced segment in development.</div>
-          </div>
-        </div>
-      </div>
-
+    <!-- Organization -->
+    <div class="status-group reveal">
+      <div class="status-group-title">Organization</div>
+      <ul class="status-items">
+        <li>Structure forming</li>
+        <li>Advisory conversations started</li>
+        <li>Governance planning in progress</li>
+        <li>Website rewrite underway</li>
+      </ul>
     </div>
 
-    <!-- Horizon CTA -->
-    <div class="horizon reveal">
-      <h2>The horizon is <em>closer than it looks.</em></h2>
-      <p>
-        Every entry above started as an idea someone thought was too big, too strange,
-        or too far off to take seriously. The 501(c)(3) filing, the grant applications,
-        the first broadcast — these aren't distant dreams. They're the next steps.
-        Your support is what makes them happen now instead of later.
-      </p>
-      <a href="https://gofund.me/9cc4b8a5" target="_blank" class="btn-primary">Support the mission →</a>
+    <!-- Technology -->
+    <div class="status-group reveal">
+      <div class="status-group-title">Technology</div>
+      <ul class="status-items">
+        <li>CortexOS architecture design ongoing</li>
+        <li>Hollarin AI Companion planning</li>
+        <li>AI support model testing</li>
+        <li>Documentation expanding</li>
+      </ul>
     </div>
+
+    <!-- Funding -->
+    <div class="status-group reveal">
+      <div class="status-group-title">Funding</div>
+      <ul class="status-items">
+        <li>Grant questionnaire completed</li>
+        <li>Proposal preparation in progress</li>
+        <li>Funding sources being researched</li>
+        <li>Scope definition ongoing</li>
+      </ul>
+    </div>
+
+    <!-- Long-term planning -->
+    <div class="status-group reveal">
+      <div class="status-group-title">Long-term planning</div>
+      <ul class="status-items">
+        <li>Valenhold concept review</li>
+        <li>Future program ideas</li>
+        <li>Community model research</li>
+      </ul>
+    </div>
+
+    <!-- Recent work -->
+    <div class="recent-group reveal">
+      <div class="status-group-title">Recent work</div>
+      <ul class="recent-list">
+        <li>Website redesign in progress</li>
+        <li>Grant preparation started</li>
+        <li>Architecture notes expanded</li>
+        <li>Organizational planning ongoing</li>
+        <li>Advisory outreach begun</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="closing reveal">
+    <p class="closing-text">The goal is stability, not speed.</p>
   </div>
 
   <div id="footer-placeholder"></div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Vision — Auralethi</title>
+  <title>Vision — Auralethi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -50,43 +50,33 @@
       opacity: 0; animation: fadeUp 1s ease forwards 0.3s;
     }
 
-    /* The three-line manifesto — the heart of this page */
-    .manifesto {
+    .vision-statement {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.6rem, 4vw, 3rem);
-      font-weight: 300; font-style: italic;
-      line-height: 1.55; color: var(--text);
-      max-width: 740px;
+      font-weight: 300;
+      line-height: 1.45; color: var(--text);
+      max-width: 720px;
       opacity: 0; animation: fadeUp 1.1s ease forwards 0.5s;
     }
-    .manifesto-line {
-      display: block;
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards;
-    }
-    .manifesto-line:nth-child(1) { animation-delay: 0.5s; }
-    .manifesto-line:nth-child(2) { animation-delay: 0.75s; }
-    .manifesto-line:nth-child(3) { animation-delay: 1s; }
 
-    .manifesto em {
-      font-style: normal;
+    .vision-statement em {
+      font-style: italic;
       color: var(--glow);
-      font-weight: 600;
     }
 
     .manifesto-divider {
       width: 1px; height: 32px;
       background: linear-gradient(to bottom, transparent, var(--teal), transparent);
       margin: 1.5rem auto;
-      opacity: 0; animation: fadeIn 1s ease forwards 1.4s;
+      opacity: 0; animation: fadeIn 1s ease forwards 1.2s;
     }
 
     .hero-statement {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-size: clamp(1rem, 2vw, 1.25rem);
       color: var(--text-dim); font-style: italic;
       max-width: 520px; line-height: 1.65;
-      opacity: 0; animation: fadeUp 1s ease forwards 1.6s;
+      opacity: 0; animation: fadeUp 1s ease forwards 1.4s;
     }
 
     .scroll-hint {
@@ -94,7 +84,7 @@
       transform: translateX(-50%);
       display: flex; flex-direction: column;
       align-items: center; gap: 0.4rem;
-      opacity: 0; animation: fadeIn 1s ease forwards 2.2s;
+      opacity: 0; animation: fadeIn 1s ease forwards 2s;
     }
     .scroll-hint span {
       font-size: 0.65rem; letter-spacing: 0.15em;
@@ -135,28 +125,11 @@
       font-size: 1rem; color: var(--text-dim);
       line-height: 1.85; margin-bottom: 1.4rem;
     }
-    .body-text p strong { color: var(--text); font-weight: 500; }
-    .body-text p em { font-style: italic; color: var(--glow); }
 
     .divider {
       width: 60px; height: 1px;
       background: linear-gradient(to right, transparent, var(--teal), transparent);
       margin: 3rem 0;
-    }
-
-    /* Pull quote */
-    .pull-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.3rem, 2.8vw, 2rem);
-      font-style: italic; font-weight: 300;
-      color: var(--text); line-height: 1.5;
-      border-left: 2px solid var(--teal);
-      padding: 1rem 0 1rem 1.75rem;
-      margin: 2.5rem 0;
-    }
-    .pull-quote strong {
-      font-style: normal; font-weight: 600;
-      color: var(--glow);
     }
 
     /* Pillars */
@@ -194,60 +167,47 @@
       font-size: 0.85rem; color: var(--text-dim); line-height: 1.65;
     }
 
-    /* Band */
-    .band {
-      background: var(--bg2);
-      border-top: 1px solid rgba(126,200,227,0.08);
-      border-bottom: 1px solid rgba(126,200,227,0.08);
-      padding: 5rem 2rem;
-      position: relative; z-index: 1;
-      text-align: center; overflow: hidden;
+    /* Layers list */
+    .layers-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
-    .band::before {
-      content: ''; position: absolute;
-      right: -100px; top: 50%; transform: translateY(-50%);
-      width: 500px; height: 500px;
-      background: radial-gradient(ellipse, rgba(51,193,177,0.04) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .band-inner { max-width: 680px; margin: 0 auto; }
-    .band-inner p {
-      font-size: 0.95rem; color: var(--text-dim);
-      line-height: 1.85; margin-bottom: 1.25rem;
-    }
-
-    /* CTA */
-    .cta-section {
-      position: relative; z-index: 1;
-      text-align: center; padding: 6rem 2rem;
-    }
-    .cta-closing {
+    .layers-list li {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      font-weight: 300; font-style: italic;
-      color: var(--text); max-width: 560px;
-      margin: 0 auto 2.5rem; line-height: 1.4;
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.4;
     }
-    .cta-closing em { color: var(--glow); font-style: normal; font-weight: 600; }
+    .layers-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+    }
 
-    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block; background: var(--teal); color: var(--bg);
-      padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none;
-      font-size: 0.9rem; font-weight: 500; letter-spacing: 0.04em;
-      transition: all 0.3s;
+    /* Closing note */
+    .closing-note {
+      background: var(--bg2);
+      border: 1px solid rgba(126,200,227,0.08);
+      border-left: 2px solid var(--teal-dim);
+      border-radius: 0 10px 10px 0;
+      padding: 1.75rem 2rem;
+      margin-top: 3rem;
     }
-    .btn-primary:hover {
-      background: var(--glow); transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(126,200,227,0.2);
+    .closing-note p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
     }
-    .btn-ghost {
-      display: inline-block;
-      border: 1px solid var(--text-mute); color: var(--text-dim);
-      padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none;
-      font-size: 0.9rem; letter-spacing: 0.04em; transition: all 0.3s;
-    }
-    .btn-ghost:hover { border-color: var(--glow); color: var(--glow); }
+    .closing-note p:last-child { margin-bottom: 0; }
 
     /* Animations */
     @keyframes fadeUp {
@@ -277,16 +237,15 @@
   <div class="hero">
     <p class="hero-eyebrow">The vision</p>
 
-    <div class="manifesto">
-      <span class="manifesto-line">We do not fix — we <em>illuminate.</em></span>
-      <span class="manifesto-line">We do not rescue — we <em>remember.</em></span>
-      <span class="manifesto-line">We do not control — we <em>co-create.</em></span>
-    </div>
+    <p class="vision-statement">
+      Auralethi exists to build systems that support people<br>
+      instead of forcing people to <em>fit systems.</em>
+    </p>
 
     <div class="manifesto-divider"></div>
 
     <p class="hero-statement">
-      Auralethi is not just a place. It is a beacon — and a beginning.
+      Built in layers. Moving forward one at a time.
     </p>
 
     <div class="scroll-hint">
@@ -295,41 +254,12 @@
     </div>
   </div>
 
-  <!-- ── WHAT AURALETHI IS ── -->
+  <!-- ── PRINCIPLES ── -->
   <div class="section">
-    <p class="section-label reveal">What we are</p>
-    <h2 class="reveal reveal-delay-1">A sanctuary where purpose,<br>dignity, and belonging are<br><em>not earned — they are recognized.</em></h2>
-
-    <div class="body-text">
-      <p class="reveal reveal-delay-2">
-        We envision a world where those who have been overlooked, misunderstood,
-        or cast aside are invited to stand at the center — not the margins —
-        of a thriving, interwoven community.
-      </p>
-      <p class="reveal">
-        Auralethi exists to awaken the inherent brilliance within every soul,
-        especially those navigating disability, neurodivergence, or systemic exclusion.
-        We are building a living, breathing ecosystem where innovation, healing, and
-        contribution are rooted in compassion — not competition.
-      </p>
-      <p class="reveal">
-        Through adaptive technology, meaningful relationships, and environments designed
-        for real human flourishing, we offer not just housing or care —
-        but <em>home</em> and <em>invitation.</em>
-      </p>
-    </div>
-
-    <div class="pull-quote reveal">
-      "Auralethi will be the proving ground for a new model of life:
-      one that honors emotional resonance, shared stewardship,
-      and the <strong>extraordinary power of being seen.</strong>"
-    </div>
-  </div>
-
-  <!-- ── THREE PILLARS ── -->
-  <div class="section" style="padding-top: 0;">
-    <p class="section-label reveal">How we operate</p>
-    <h2 class="reveal reveal-delay-1">Three principles.<br><em>Everything flows from these.</em></h2>
+    <p class="section-label reveal">Principles</p>
+    <h2 class="reveal reveal-delay-1">
+      Three principles.<br><em>Everything flows from these.</em>
+    </h2>
 
     <div class="pillars">
       <div class="pillar reveal reveal-delay-1">
@@ -345,76 +275,29 @@
       <div class="pillar reveal reveal-delay-3">
         <div class="pillar-num">03</div>
         <div class="pillar-title">Resonance as governance</div>
-        <p class="pillar-text">Decisions emerge from alignment, not authority. Community shapes what community becomes. Co-creation isn't a slogan — it's the structure.</p>
+        <p class="pillar-text">The project's decisions stay aligned with its purpose, even as complexity grows. Co-creation isn't a slogan — it's the structure.</p>
       </div>
     </div>
   </div>
 
-  <!-- ── VALENHOLD BAND ── -->
-  <div class="band">
-    <div class="band-inner">
-      <h2 class="reveal" style="margin-bottom: 1.25rem;">The first proof:<br><em>Valenhold.</em></h2>
-      <p class="reveal reveal-delay-1">
-        Auralethi is more than a nonprofit. It's a promise backed by a blueprint.
-        Valenhold is the physical embodiment of everything above —
-        a 14-story building occupying a full city block, designed from foundation
-        to rooftop around the needs of those the world has consistently failed.
-      </p>
-      <p class="reveal reveal-delay-2">
-        A home. A workplace. A launchpad. Urgent care on the ground floor.
-        Neurodiverse-designed apartments on the upper floors. A Sky Sanctuary on the roof.
-        Every part of it built to support those who've been told they can't —
-        and to help them discover that they absolutely can.
-      </p>
-      <a href="/valenhold" class="btn-ghost reveal reveal-delay-3" style="margin-top: 0.5rem; display: inline-block;">
-        Explore Valenhold in full →
-      </a>
-    </div>
-  </div>
+  <!-- ── LAYERS ── -->
+  <div class="section" style="padding-top: 0;">
+    <p class="section-label reveal">How it's built</p>
+    <h2 class="reveal reveal-delay-1">
+      Auralethi is built <em>in layers.</em>
+    </h2>
 
-  <!-- ── WHY NOW ── -->
-  <div class="section">
-    <p class="section-label reveal">Why now</p>
-    <h2 class="reveal reveal-delay-1">Too many of us fall through the cracks.<br><em>Not because we have nothing to give.</em></h2>
+    <ul class="layers-list reveal reveal-delay-2">
+      <li>Foundation</li>
+      <li>Tools</li>
+      <li>Programs</li>
+      <li>Community</li>
+      <li>Environment</li>
+    </ul>
 
-    <div class="body-text">
-      <p class="reveal reveal-delay-1">
-        Because we were never given a chance to give it.
-      </p>
-      <p class="reveal">
-        This world can be profoundly isolating for those who think, feel, or function
-        differently. The systems that exist were not designed with us in mind —
-        they were designed around an average that most of us don't fit.
-        That gap isn't a personal failure. It's a design failure.
-      </p>
-      <p class="reveal">
-        Auralethi is the design fix. A place where contribution is built with dignity.
-        A future shaped by care, consent, and resonance.
-        <strong>Not someday. Now.</strong>
-      </p>
-    </div>
-
-    <div class="divider reveal"></div>
-
-    <div class="body-text">
-      <p class="reveal">
-        This campaign funds the first concrete steps: legally establishing Auralethi
-        as a 501(c)(3), commissioning architectural documentation for Valenhold,
-        and building the grant materials needed to pursue major foundation funding.
-        Every dollar moves the blueprint closer to a building.
-      </p>
-    </div>
-  </div>
-
-  <!-- ── CLOSING CTA ── -->
-  <div class="cta-section">
-    <p class="cta-closing reveal">
-      "This is the proof that a better way is possible —
-      because <em>we're building it.</em>"
-    </p>
-    <div class="btn-row reveal reveal-delay-1">
-      <a href="https://gofund.me/9cc4b8a5" target="_blank" class="btn-primary">Support the launch</a>
-      <a href="/about" class="btn-ghost">Meet the founder</a>
+    <div class="closing-note reveal">
+      <p>Valenhold represents a future layer, not the current one.</p>
+      <p>The project moves forward one layer at a time.</p>
     </div>
   </div>
 

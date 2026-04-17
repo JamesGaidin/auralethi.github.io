@@ -1,10 +1,6 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# Visual Studio
+.vs/
 
-/.vs/auralethi.github.io/FileContentIndex/6e3712d6-f3bf-4328-b1e3-92cc49bb1c3a.vsidx
-/.vs/auralethi.github.io/FileContentIndex/9abe0269-4737-4095-aee7-c4455e263fcb.vsidx
-/.vs/slnx.sqlite
-/.vs/auralethi.github.io/FileContentIndex/4e05cca8-fa57-4e75-9db3-b16b2ee7642c.vsidx
-/.vs/auralethi.github.io/FileContentIndex/ccfe3a7b-9688-4651-a024-b984be54f292.vsidx
-*.vsidx
+# OS
+.DS_Store
+Thumbs.db

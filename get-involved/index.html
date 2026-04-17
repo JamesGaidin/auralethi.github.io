@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — Auralethi</title>
+  <meta name="description" content="Get involved with Auralethi. Support the research, partner with us, follow the work, or contribute directly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .involve-block {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .involve-block:last-of-type {
+      border-bottom: none;
+    }
+
+    .involve-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--glow);
+      margin-bottom: 0.75rem;
+    }
+
+    .involve-block p {
+      font-size: 0.92rem;
+      color: var(--text-dim);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-body">
+    <div class="page-inner">
+
+      <p class="section-label">Get Involved</p>
+      <h1>A Different Kind of Invitation</h1>
+
+      <p>
+        Auralethi is early-stage and building carefully. That means the people who get
+        involved now are not joining something finished. They are helping determine
+        what it becomes.
+      </p>
+
+      <div class="page-divider"></div>
+
+      <div class="involve-block">
+        <h3>Support the Mission</h3>
+        <p>
+          Auralethi operates as a nonprofit. Financial support keeps the research
+          independent and the systems in development. If this work matters to you,
+          supporting it is a direct way to make it more possible.
+        </p>
+        <a href="mailto:james.p.dayson@gmail.com" class="btn-primary">Get in Touch</a>
+      </div>
+
+      <div class="involve-block">
+        <h3>Partner With Us</h3>
+        <p>
+          If your organization works in AI safety, assistive technology, disability
+          advocacy, or adjacent fields, there may be real overlap worth exploring.
+          Auralethi is interested in substantive collaboration, not surface-level
+          affiliation.
+        </p>
+        <a href="mailto:james.p.dayson@gmail.com" class="btn-ghost">Reach Out</a>
+      </div>
+
+      <div class="involve-block">
+        <h3>Follow the Work</h3>
+        <p>
+          The research is published and ongoing. The systems are in active development.
+          If you are not ready to get involved but want to stay close to what is
+          happening, following the progress is a good place to start.
+        </p>
+        <a href="https://github.com/ResonantCognition/Research-documentation" class="btn-ghost" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <div class="involve-block">
+        <h3>Contribute Directly</h3>
+        <p>
+          Auralethi is looking for people with backgrounds in AI research, system
+          design, and related fields who want to work on problems that matter.
+          If that is you, reach out.
+        </p>
+        <a href="mailto:james.p.dayson@gmail.com" class="btn-ghost">Contact</a>
+      </div>
+
+      <div class="page-divider"></div>
+
+      <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.2rem,2.5vw,1.7rem); font-weight:300; color:var(--text); line-height:1.55;">
+        You are not just supporting a cause. You are helping build something that does
+        not exist yet in the way it needs to. That is worth doing carefully, and with
+        the right people.
+      </p>
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/shared/navbar.html').then(r => r.text()).then(h => {
+      document.getElementById('nav-placeholder').innerHTML = h;
+    });
+    fetch('/shared/footer.html').then(r => r.text()).then(h => {
+      document.getElementById('footer-placeholder').innerHTML = h;
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

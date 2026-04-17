@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Auralethi</title>
+  <meta name="description" content="Relational Surface Risk: the safety problems that emerge from sustained human-AI interaction over time. Auralethi's research framework." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .paper-card {
+      background: var(--bg2);
+      border: 1px solid rgba(126,200,227,0.1);
+      border-radius: 10px;
+      padding: 2rem 2.25rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--teal-dim), transparent);
+    }
+
+    .paper-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--glow);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .paper-meta {
+      font-size: 0.8rem;
+      color: var(--text-mute);
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+
+    .paper-card p {
+      font-size: 0.92rem;
+      color: var(--text-dim);
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .inquiry-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+    }
+
+    .inquiry-list li {
+      font-size: 0.92rem;
+      color: var(--text-dim);
+      line-height: 1.8;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .inquiry-list li::before {
+      content: '-- ';
+      color: var(--text-mute);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-body">
+    <div class="page-inner">
+
+      <p class="section-label">Research</p>
+      <h1>AI Safety Is Not Only a Technical Problem</h1>
+
+      <p>
+        It is also a relational one. As AI systems become part of daily life, their
+        long-term interaction with people introduces forms of influence, dependency,
+        and behavioral shaping that most safety frameworks were not designed to detect.
+        This layer remains underexplored. Auralethi's research focuses here.
+      </p>
+
+      <div class="page-divider"></div>
+
+      <h2>Relational Surface Risk</h2>
+
+      <p>
+        Relational Surface Risk describes the risks that emerge from sustained
+        interaction between a person and an AI system.
+      </p>
+
+      <p>
+        Traditional safety concerns focus on whether a single output is correct,
+        harmful, or aligned. Relational Surface Risk looks at what unfolds over
+        time instead: how trust forms across repeated interactions, how behavior
+        is shaped gradually, how dependency develops without being recognized,
+        and how alignment can drift at the relational level even when individual
+        responses appear sound.
+      </p>
+
+      <p>
+        A system can be technically safe in every measurable moment and still be
+        unsafe in its cumulative effect on the person using it.
+      </p>
+
+      <div class="page-divider"></div>
+
+      <h2>Why This Matters Now</h2>
+
+      <p>
+        AI systems are moving from tools used occasionally to presences relied upon
+        continuously. As that shift accelerates, the long-term effects of interaction
+        become more consequential than any single response. Safety research needs to
+        account for this.
+      </p>
+
+      <p>
+        Relational Surface Risk is a framework for doing that, for asking not just
+        "is this output safe?" but "what is this system doing to this person over time?"
+      </p>
+
+      <div class="page-divider"></div>
+
+      <h2>Research</h2>
+
+      <div class="paper-card">
+        <h3>Relational Surface Risk</h3>
+        <p class="paper-meta">Working Paper &nbsp;|&nbsp; Published on GitHub &nbsp;|&nbsp; Peer review in progress</p>
+        <p>
+          This paper introduces the concept of Relational Surface Risk, defines its
+          core mechanisms, and outlines a framework for identifying and addressing it
+          in AI system design. It is an early-stage framework intended to open a line
+          of inquiry, not to close one.
+        </p>
+        <div class="btn-row">
+          <a href="https://github.com/ResonantCognition/Research-documentation" class="btn-ghost" target="_blank" rel="noopener">Read on GitHub</a>
+        </div>
+      </div>
+
+      <div class="page-divider"></div>
+
+      <h2>Supporting Areas of Inquiry</h2>
+
+      <p>
+        The RSR framework connects to several broader questions Auralethi is actively
+        developing:
+      </p>
+
+      <ul class="inquiry-list">
+        <li>How should ethical system design account for long-term interaction effects?</li>
+        <li>What does interaction safety look like as a structural property, rather than an output property?</li>
+        <li>How does alignment drift at the relational level, and how can systems be designed to resist it?</li>
+      </ul>
+
+      <p style="margin-top:1.5rem;">These questions are open. The work is ongoing.</p>
+
+      <div class="page-divider"></div>
+
+      <h2>From Research to Systems</h2>
+
+      <p>
+        Auralethi does not treat research as separate from what gets built. The
+        frameworks developed here directly inform system design. The goal is not to
+        produce theory about safer AI, but to produce AI systems that are actually
+        safer to interact with over time.
+      </p>
+
+      <div class="btn-row">
+        <a href="/systems" class="btn-primary">See the Systems</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/shared/navbar.html').then(r => r.text()).then(h => {
+      document.getElementById('nav-placeholder').innerHTML = h;
+    });
+    fetch('/shared/footer.html').then(r => r.text()).then(h => {
+      document.getElementById('footer-placeholder').innerHTML = h;
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

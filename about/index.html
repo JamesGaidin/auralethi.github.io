@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Auralethi</title>
-  <meta name="description" content="Auralethi is a nonprofit organization focused on AI safety, specifically the risks that emerge from sustained human-AI interaction over time." />
+  <meta name="description" content="Auralethi is a nonprofit organization focused on AI safety, specifically on a layer of risk that has received less attention than it deserves." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -21,15 +21,15 @@
       <h1>What Auralethi Is</h1>
 
       <p>
-        Auralethi is a nonprofit organization focused on AI safety, specifically on a layer
-        of risk that has received less attention than it deserves.
+        Auralethi is a nonprofit organization focused on AI safety, specifically
+        on a layer of risk that has received less attention than it deserves.
       </p>
 
       <p>
-        Most AI safety work examines whether systems behave correctly in isolated moments.
-        Auralethi examines what happens when people interact with AI systems continuously,
-        over time. That shift in focus changes what safety means, what it requires, and what
-        it looks like when it is working.
+        Most AI safety work examines whether systems behave correctly in isolated
+        moments. Auralethi examines what happens when people interact with AI systems
+        continuously, over time. That shift in focus changes what safety means, what
+        it requires, and what it looks like when it is working.
       </p>
 
       <div class="page-divider"></div>
@@ -37,11 +37,12 @@
       <h2>Why It Exists</h2>
 
       <p>
-        AI systems are no longer used occasionally. They are becoming part of how people
-        think, decide, seek support, and understand their options. This kind of sustained
-        interaction introduces risks that single-output evaluations were never designed
-        to catch: subtle behavioral shaping, dependency formation, trust that accumulates
-        faster than it should, and influence on decision-making that compounds over time.
+        AI systems are no longer used occasionally. They are becoming part of how
+        people think, decide, seek support, and understand their options. This kind
+        of sustained interaction introduces risks that single-output evaluations were
+        never designed to catch: subtle behavioral shaping, dependency formation,
+        trust that accumulates faster than it should, and influence on
+        decision-making that compounds over time.
       </p>
 
       <p>
@@ -63,9 +64,9 @@
       </p>
 
       <p>
-        This is not a rejection of existing safety work. It is an extension of it, into
-        territory that becomes more important as AI systems become more present in
-        people's lives.
+        This is not a rejection of existing safety work. It is an extension of it,
+        into territory that becomes more important as AI systems become more present
+        in people's lives.
       </p>
 
       <div class="page-divider"></div>
@@ -74,19 +75,22 @@
 
       <p>The work moves across three connected areas:</p>
 
+      <h3>Research</h3>
       <p>
-        <strong>Research.</strong> Developing frameworks for understanding relational risk
-        in human-AI interaction, including the concept of Relational Surface Risk.
+        Developing frameworks for understanding relational risk in human-AI
+        interaction, including the concept of Relational Surface Risk.
       </p>
 
+      <h3>System Design</h3>
       <p>
-        <strong>System Design.</strong> Building architectures that treat safety and
-        alignment as structural properties, not post-hoc constraints.
+        Building architectures that treat safety and alignment as structural
+        properties, not post-hoc constraints.
       </p>
 
+      <h3>Applied Models</h3>
       <p>
-        <strong>Applied Models.</strong> Implementing and testing these ideas in real
-        contexts, so the work remains grounded in practice rather than theory alone.
+        Implementing and testing these ideas in real contexts, so the work remains
+        grounded in practice rather than theory alone.
       </p>
 
       <p>These are not separate tracks. They inform each other.</p>
@@ -96,15 +100,15 @@
       <h2>The Larger Goal</h2>
 
       <p>
-        Auralethi's work is grounded in AI safety, but its aim is fundamentally human.
-        The goal is not only to prevent harm. It is to ensure that the systems people
-        rely on actually support their autonomy, their judgment, and their ability to
-        participate meaningfully in their own lives.
+        Auralethi's work is grounded in AI safety, but its aim is fundamentally
+        human. The goal is not only to prevent harm. It is to ensure that the systems
+        people rely on actually support their autonomy, their judgment, and their
+        ability to participate meaningfully in their own lives.
       </p>
 
       <p>
-        Support systems that undermine the people they support are not safe, regardless
-        of what their benchmarks say.
+        Support systems that undermine the people they support are not safe,
+        regardless of what their benchmarks say.
       </p>
 
       <div class="page-divider"></div>
@@ -113,19 +117,9 @@
 
       <p>
         This work is early. Auralethi is building carefully, one specific problem,
-        understood precisely, addressed directly. The long-term direction extends toward
-        integrated environments where support is designed holistically across digital and
-        physical contexts. That work is exploratory and ongoing.
-      </p>
-
-      <div class="page-divider"></div>
-
-      <h2>Founder</h2>
-
-      <p>
-        Auralethi was founded by James Dayson, a software engineer and system designer
-        with experience building automation systems, workflow tools, and cognitive support
-        software in real-world environments.
+        understood precisely, addressed directly. The long-term direction extends
+        toward integrated environments where support is designed holistically across
+        digital and physical contexts. That work is exploratory and ongoing.
       </p>
 
     </div>
@@ -140,11 +134,6 @@
     fetch('/shared/footer.html').then(r => r.text()).then(h => {
       document.getElementById('footer-placeholder').innerHTML = h;
     });
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>

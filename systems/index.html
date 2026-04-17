@@ -18,17 +18,18 @@
     <div class="page-inner">
 
       <p class="section-label">Systems</p>
-      <h1>Research Without Implementation Is Just Theory</h1>
+      <h1>Why Auralethi Builds</h1>
 
       <p>
-        Auralethi builds systems because the concepts being developed need to be tested
-        in real contexts. That is the only way to know if they actually work.
+        Research without implementation is just theory. Auralethi builds systems
+        because the concepts being developed need to be tested in real contexts.
+        That is the only way to know if they actually work.
       </p>
 
       <p>
-        The systems in development here are not products. They are applied models, built
-        to demonstrate that safer long-term human-AI interaction is achievable in
-        practice, not just in principle.
+        The systems in development here are not products. They are applied models,
+        built to demonstrate that safer long-term human-AI interaction is achievable
+        in practice, not just in principle.
       </p>
 
       <div class="page-divider"></div>
@@ -36,20 +37,20 @@
       <h2>What the Work Focuses On</h2>
 
       <p>
-        The core question driving system design at Auralethi is straightforward: what
-        does an AI system look like when it is built from the start to remain safe
-        across extended use?
+        The core question driving system design at Auralethi is straightforward:
+        what does an AI system look like when it is built from the start to remain
+        safe across extended use?
       </p>
 
       <p>
-        Not just correct in a given moment. Safe across time. That distinction changes
-        almost every design decision.
+        Not just correct in a given moment. Safe across time. That distinction
+        changes almost every design decision.
       </p>
 
       <p>
         It affects how trust is communicated. How dependency is monitored. How the
-        system represents its own limitations. How a person retains meaningful control
-        over the interaction rather than gradually ceding it.
+        system represents its own limitations. How a person retains meaningful
+        control over the interaction rather than gradually ceding it.
       </p>
 
       <div class="page-divider"></div>
@@ -60,13 +61,11 @@
         <span class="status-badge">In Development</span>
         <h3>Halorin</h3>
         <p>
-          Halorin is a model for long-term human-AI interaction. It is designed around
-          the principle that sustained safety requires structural choices, not just
-          behavioral constraints.
-        </p>
-        <p>
-          The system is built to remain transparent about what it is, stable across
-          extended use, and calibrated to support rather than replace human judgment.
+          Halorin is a model for long-term human-AI interaction. It is designed
+          around the principle that sustained safety requires structural choices,
+          not just behavioral constraints. The system is built to remain transparent
+          about what it is, stable across extended use, and calibrated to support
+          rather than replace human judgment.
         </p>
       </div>
 
@@ -77,11 +76,8 @@
           CortexOS is a cognitive architecture built around governance as a core
           property. Rather than adding safety constraints after the fact, CortexOS
           treats alignment and oversight as structural features of how the system
-          operates.
-        </p>
-        <p>
-          The goal is a foundation that other systems can build on without inheriting
-          unsafe defaults.
+          operates. The goal is a foundation that other systems can build on without
+          inheriting unsafe defaults.
         </p>
       </div>
 
@@ -91,8 +87,8 @@
 
       <p>
         Both systems are direct implementations of the Relational Surface Risk
-        framework. The risks RSR identifies (dependency formation, trust
-        miscalibration, gradual erosion of autonomy) are addressed at the design
+        framework. The risks RSR identifies, dependency formation, trust
+        miscalibration, gradual erosion of autonomy, are addressed at the design
         level, not patched at the output level.
       </p>
 
@@ -134,11 +130,6 @@
     fetch('/shared/footer.html').then(r => r.text()).then(h => {
       document.getElementById('footer-placeholder').innerHTML = h;
     });
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>

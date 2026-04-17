@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Auralethi</title>
-  <meta name="description" content="Relational Surface Risk: the safety problems that emerge from sustained human-AI interaction over time. Auralethi's research framework." />
+  <meta name="description" content="Relational Surface Risk: a framework for understanding the safety problems that emerge from sustained human-AI interaction over time." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,40 +34,14 @@
       font-weight: 600;
       color: var(--glow);
       margin-top: 0;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .paper-meta {
       font-size: 0.8rem;
       color: var(--text-mute);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       margin-bottom: 1.25rem;
-    }
-
-    .paper-card p {
-      font-size: 0.92rem;
-      color: var(--text-dim);
-      line-height: 1.85;
-      margin-bottom: 0.75rem;
-    }
-
-    .inquiry-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0;
-    }
-
-    .inquiry-list li {
-      font-size: 0.92rem;
-      color: var(--text-dim);
-      line-height: 1.8;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-
-    .inquiry-list li::before {
-      content: '-- ';
-      color: var(--text-mute);
     }
   </style>
 </head>
@@ -79,18 +53,18 @@
     <div class="page-inner">
 
       <p class="section-label">Research</p>
-      <h1>AI Safety Is Not Only a Technical Problem</h1>
+      <h1>AI safety is not only a technical problem. It is also a relational one.</h1>
 
       <p>
-        It is also a relational one. As AI systems become part of daily life, their
-        long-term interaction with people introduces forms of influence, dependency,
-        and behavioral shaping that most safety frameworks were not designed to detect.
-        This layer remains underexplored. Auralethi's research focuses here.
+        As AI systems become part of daily life, their long-term interaction with
+        people introduces forms of influence, dependency, and behavioral shaping that
+        most safety frameworks were not designed to detect. This layer remains
+        underexplored. Auralethi's research focuses here.
       </p>
 
       <div class="page-divider"></div>
 
-      <h2>Relational Surface Risk</h2>
+      <h2>The Core Concept</h2>
 
       <p>
         Relational Surface Risk describes the risks that emerge from sustained
@@ -99,11 +73,10 @@
 
       <p>
         Traditional safety concerns focus on whether a single output is correct,
-        harmful, or aligned. Relational Surface Risk looks at what unfolds over
-        time instead: how trust forms across repeated interactions, how behavior
-        is shaped gradually, how dependency develops without being recognized,
-        and how alignment can drift at the relational level even when individual
-        responses appear sound.
+        harmful, or aligned. Relational Surface Risk looks at what unfolds over time
+        instead: how trust forms across repeated interactions, how behavior is shaped
+        gradually, how dependency develops without being recognized, and how alignment
+        can drift at the relational level even when individual responses appear sound.
       </p>
 
       <p>
@@ -129,19 +102,18 @@
 
       <div class="page-divider"></div>
 
-      <h2>Research</h2>
+      <h2>Research Artifact</h2>
 
       <div class="paper-card">
         <h3>Relational Surface Risk</h3>
-        <p class="paper-meta">Working Paper &nbsp;|&nbsp; Published on GitHub &nbsp;|&nbsp; Peer review in progress</p>
+        <p class="paper-meta">Working Paper</p>
         <p>
-          This paper introduces the concept of Relational Surface Risk, defines its
-          core mechanisms, and outlines a framework for identifying and addressing it
-          in AI system design. It is an early-stage framework intended to open a line
-          of inquiry, not to close one.
+          Published on GitHub. Distributed via LinkedIn and other platforms. Peer
+          review is being actively sought. This is an early-stage framework intended
+          to open a line of inquiry, not to close one.
         </p>
         <div class="btn-row">
-          <a href="https://github.com/ResonantCognition/Research-documentation" class="btn-ghost" target="_blank" rel="noopener">Read on GitHub</a>
+          <a href="https://github.com/ResonantCognition/Research-documentation" class="btn-ghost" target="_blank" rel="noopener">Read the Paper</a>
         </div>
       </div>
 
@@ -154,13 +126,14 @@
         developing:
       </p>
 
-      <ul class="inquiry-list">
-        <li>How should ethical system design account for long-term interaction effects?</li>
-        <li>What does interaction safety look like as a structural property, rather than an output property?</li>
-        <li>How does alignment drift at the relational level, and how can systems be designed to resist it?</li>
-      </ul>
+      <p>
+        How should ethical system design account for long-term interaction effects?
+        What does interaction safety look like as a structural property, rather than
+        an output property? How does alignment drift at the relational level, and how
+        can systems be designed to resist it?
+      </p>
 
-      <p style="margin-top:1.5rem;">These questions are open. The work is ongoing.</p>
+      <p>These questions are open. The work is ongoing.</p>
 
       <div class="page-divider"></div>
 
@@ -189,11 +162,6 @@
     fetch('/shared/footer.html').then(r => r.text()).then(h => {
       document.getElementById('footer-placeholder').innerHTML = h;
     });
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>

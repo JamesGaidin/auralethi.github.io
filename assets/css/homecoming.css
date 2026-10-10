@@ -39,3 +39,10 @@
 .about-story>.intro{max-width:60rem}
 @media(max-width:680px){.brand-emblem{--emblem-width:42px}.hero-brand{min-height:320px}.hero-caption{font-size:1rem!important}.hero-emblem{--emblem-width:min(72%,250px)}}
 @media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}
+
+/* Hero centering correction: the legacy .hero-art span absolute-position rule
+   was pinning the emblem at bottom-left despite the hero grid alignment.
+   The transparent standalone artwork can replace the sprite after its binary
+   upload has been independently verified. */
+.hero-brand .hero-emblem{position:relative;top:auto;right:auto;bottom:auto;left:auto;inset:auto;align-self:center;justify-self:center;max-width:76%;margin:0;display:block}
+@media(max-width:680px){.hero-brand .hero-emblem{max-width:72%}}

@@ -47,3 +47,16 @@ Canonical Research_Backlog.xlsx is stored outside this public repo. Snapshot of 
 6. At every merge: update this document and record merge SHA, tests and remaining gaps.
 
 This documentation synchronization lives on docs/verified-homecoming-handoff pending human-approved merge.
+
+## Pending feature branch, 2026-10-10
+- Branch `feature/about-research-detail-fix` removes the still-live (on prior `main`) visitor-facing editorial omission paragraph from `about/index.html`.
+- Adds `research/cortexos/`, `research/serenari/` and `research/relational-surface-risk/` detail routes. Replaces Research and Projects index links that previously redirected back to general overview pages.
+- Draft content intentionally distinguishes research and implementation from proven or operational public services; no unverified results were published.
+- Original founding story, including historical punctuation, is otherwise preserved. About and Contact remain footer-only.
+- **Not on main until founder-approved merge.** After merge, verify actual mobile/desktop rendered pages and continue deeper source-backed program content and news feeds. Browser verification has not been performed.
+
+## Additional pending work, 2026-10-10
+- About is now a second landing page for business card arrivals: welcome, links to Projects/Research/News/Get Involved, then the preserved 2025 founder story.
+- Rebuilt /get-involved/ as a Homecoming styled community participation landing page. Forums, discussion boards and live chat are explicitly future plans, not currently available services. No unverified contact email or personal phone.
+- Added Get Involved to footer navigation across Homecoming pages and legacy shared/footer.html. About, Contact and Get Involved remain absent from the primary header navigation.
+- All these changes remain on feature/about-research-detail-fix, not published until approved and merged; check rendered links and mobile appearance after deployment.

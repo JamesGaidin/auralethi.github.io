@@ -31,3 +31,10 @@ All content committed here is **public by default**, including docs, commit mess
 3. No broken links or unexpected loss of legacy pages.
 4. No private-content disclosure.
 5. Test/deployment validation and explicit publication approval.
+
+## Website-specific editorial decisions (2026-10-09)
+- Do not write new em dashes in authored website copy, documents or owner-voice drafts; historical founder prose is preserved as written unless explicitly changed.
+- Original founder story may have intentional omissions. Do not expose a visitor-facing explanation of omitted material.
+- Canonical research backlog records require separate editorial release after admission. Never publish chat examples as if they were approved records.
+- Use only actual founder-provided artwork when a brand mark is presented as the official emblem. A conceptual mockup is not an authenticated logo asset.
+- Check live GitHub PR status before any merge recommendations.

@@ -1,33 +1,29 @@
-# Website Project Context
+# Auralethi Website Project Context
 
-**Project:** Auralethi public website — Homecoming redesign  
-**Repository:** `JamesGaidin/auralethi.github.io`  
-**Domain:** `auralethi.org` (repository CNAME; registrar and DNS not independently verified)  
-**Status:** Planning and development, not yet published  
-**Last documented:** 2026-10-09
+Repository: JamesGaidin/auralethi.github.io. Domain in CNAME: auralethi.org.
+Status: Homecoming redesign code merged into main as of 2026-10-09. Browser test completion not established. Current checkpoint main HEAD 8c2e2407a00e8d80c66f49b40f11057135fc5913.
 
-## Purpose
-Build the public front door for Auralethi: a growing, community-centered nonprofit vision that invites people to connect, explore and choose their own paths. The site should show concrete research and ongoing work alongside transparently labeled future aspirations. The community is its people; Auralethi seeks to support the conditions in which people can connect and thrive.
+## Mission and voice
+A community-centered public front door. Human belonging, curiosity, dignity, accessibility, agency and possibility take priority over presenting technology as a protagonist. Free to Meet serves connection, shared knowledge, creativity and research. Safe to Become describes longer-term supportive/accessible environments, not currently available housing or care services.
 
-## Experience direction
-- Brief, optional, accessible introductory splash displaying **Auralethi** and three values (working words: *Community, Belonging, Possibility*; not final), followed by **Free to meet. Safe to become.**
-- Homepage introduces the organization first, then asks about the visitor's interests, needs, aspirations and possibilities.
-- **Free to Meet:** community, connections, exploration, technology, education, creativity, research.
-- **Safe to Become:** stability and practical supports, accessible living, independence, care, opportunities.
-- Project pages show status, evidence of progress, next steps, and distinguish plans from availability.
-- News/progress page shows a verifiable journey including setbacks, not promotional filler.
-- Future **Jix** assistant/receptionist is optional and never required to navigate the site. Architecture may reserve an integration point; do not claim it is deployed.
+## Routes
+- / : visitor-first homepage, two mission pillars, projects, journey and invitation. CSS animated orbit around genuine brand image crop.
+- /free-to-meet/ and /safe-to-become/ : two pillars.
+- /projects/ : project overview with honest status.
+- /research/ : program index, publications, invitation to independent research, planned feeds. No canonical backlog items approved for public release yet.
+- /news/ : public progress scaffold, not functioning automated tagged feed.
+- /about/ : preserved founder story from May 2025 with requested omission, and separate present-day chapter. This route is important for existing business-card QR links.
+- /contact/ : placeholder pending a verified official organizational channel.
+About and Contact are footer-only, never in header navigation. Legacy /systems/ and /get-involved/ may still require migration.
 
-## Proposed information architecture
-Home; Free to Meet; Safe to Become; Projects; Research; About; News / Our Journey. These are proposals, not confirmation that routes already exist.
+## Branding
+The true founder-provided asset is assets/logo.png, a full opaque brand proof sheet. CSS file assets/css/homecoming.css clips the emblem via background positioning on brand-emblem, splash-emblem and hero-emblem elements. This is not a generated logo, but its alignment and pixel appearance still need actual browser verification.
+Official colors: midnight #0B1220, slate #1E2A44, steel #415A7A, copper #E79A63, champagne #F6C88D, silver #A7B7D6, pearl #F5F2EA.
+Tagline: Free to meet. Safe to become.
+Public motto: We build things. We test stuff. We document. We share what we learn.
+No new em dashes in writing. Historical original founder prose may retain its authentic punctuation.
 
-## Design constraints
-Accessible, responsive, keyboard navigable, fast-loading, support reduced motion, respect privacy, usable without conversational AI or authentication. Minimal cost: existing GitHub Pages/static frontend. Future Visual Studio/Blazor option must not force paid server hosting.
+## Technical and editorial boundaries
+Static GitHub Pages HTML/CSS/JS; accessible, responsive and reduced-motion aware. No paid backend assumption. Jix is a future optional guide, not active. Do not publish unverified services, partnerships or claims. Private research and chat are not automatically public.
 
-## Origin and continuity
-Original 2025 site focused on belonging and a sanctuary for misunderstood people. April 2026 redesign emphasized AI safety research. October 2026 goal reconnects the original community mission with the matured research and systems as enabling projects. Preserve research substance without making technology the organization's entire identity.
-
-## Relevant source baseline
-Commit `1a395b2bb7` (2025-05-15) contains pre-AI-safety homepage; commit `fb3da811fa` (2026-04-17) introduces AI-safety positioning; `2959d89014` (2026-04-17) is the latest known `main` baseline at the time this document was authored.
-
-See STATE, GOVERNANCE, WORKFLOW, ROADMAP.
+Begin any session with AGENTS.md and docs/project/STATE.md, then read governance, workflow, roadmap and research publication rules. Verify main HEAD and merged/open PRs. See STATE.md for dated source-of-truth snapshot and next work.

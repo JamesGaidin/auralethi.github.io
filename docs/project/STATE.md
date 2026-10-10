@@ -18,6 +18,9 @@
 - Desired near-term release: weekend October 10–11, 2026.
 - Dedicated servers and Jix infrastructure are later-stage goals.
 
+## Decision log
+- 2026-10-09: Founder explicitly approved Homecoming HTML/CSS implementation plan with final caveat: About **and** Contact Us must be in footer, not recurring primary navigation; Contact gets separate page, no public phone number yet. Approved to proceed with implementation on feature branch, **not** live publication.
+
 ## Work performed
 - 2026-10-09: Created project documentation on development branch. This is **not** a redesign launch.
 - A weekly Friday morning ChatGPT automation was configured to review verifiable progress and prepare **unpublished** drafts for approval. It is outside the repository; actual delivery and GitHub PR creation are not yet tested. It must not imply auto-publishing.

@@ -6,7 +6,7 @@ Updated: 2026-10-09. Targets are intentions, not commitments.
 - [ ] Publish new static, accessible homepage emphasizing Auralethi's community mission.
 - [ ] Introduce Free to Meet / Safe to Become; distinguish current vs planned initiatives.
 - [ ] Add simple splash intro: name + three thematic words, skip/reduced motion.
-- [ ] Restore/maintain routes: About, Research, Projects and a basic News/Our Journey page.
+- [ ] Restore/maintain routes: About, Research, Projects and a basic News/Our Journey page. Add Contact Us as a footer-only destination; no private contact details.
 - [ ] Keep useful existing AI safety research reachable.
 - [ ] Validate mobile, keyboard access, links, content and deployment on GitHub Pages.
 

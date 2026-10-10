@@ -4,3 +4,6 @@
 :root{--brand-midnight:#0b1220;--brand-slate:#1e2a44;--brand-steel:#415a7a;--brand-copper:#e79a63;--brand-champagne:#f6c88d;--brand-pearl:#f5f2ea;--brand-mist:#a7b7d6}
 .brand-mark{border-color:var(--brand-champagne);box-shadow:0 0 0 4px #e79a6313,inset -9px -4px 13px #e79a6399,0 0 14px #f6c88d55}
 .gradient{background:linear-gradient(90deg,var(--brand-copper),var(--brand-champagne),var(--brand-mist));color:transparent;background-clip:text}
+
+/* Preserve the supplied artwork: the image is an embedded crop of the original proof, not a redrawn emblem. */
+.brand-logo{display:block;width:42px;height:34px;object-fit:contain;flex-shrink:0}.splash-logo{display:block;width:min(180px,45vw);height:auto;margin-inline:auto;filter:drop-shadow(0 0 15px #f6c88d44)}

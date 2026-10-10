@@ -1,4 +1,4 @@
-# Auralethi Website — Agent Entry Point
+# Auralethi Website : Agent Entry Point
 
 **Start here for any AI collaborator or human returning to this repository.** This file is public. Do not store secrets, personal records, credentials, unpublished private repository content, or internal security details here.
 

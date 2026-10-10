@@ -7,3 +7,35 @@
 
 /* Preserve the supplied artwork: the image is an embedded crop of the original proof, not a redrawn emblem. */
 .brand-logo{display:block;width:42px;height:34px;object-fit:contain;flex-shrink:0}.splash-logo{display:block;width:min(180px,45vw);height:auto;margin-inline:auto;filter:drop-shadow(0 0 15px #f6c88d44)}
+
+/* Exact image crop from the founder's original proof sheet: no generated replacement.
+   Source: /assets/logo.png (1376x1101). Emblem bounds approx x=205..623, y=37..352.
+   CSS sprite avoids another binary asset upload and keeps the logo's original design. */
+.brand-emblem,.splash-emblem,.hero-emblem{
+ --emblem-width:52px;display:inline-block;flex:none;width:var(--emblem-width);height:calc(var(--emblem-width) * .808);
+ background-image:url('/assets/logo.png');background-repeat:no-repeat;
+ background-size:330.14% auto;background-position:21.4% 4.8%;
+ background-color:#0b1220;
+}
+.brand-emblem{--emblem-width:52px}
+.splash-emblem{--emblem-width:clamp(190px,38vw,320px);justify-self:center;filter:drop-shadow(0 0 18px #f6c88d45)}
+.hero-brand{min-height:440px;display:grid;place-items:center;isolation:isolate;
+ background:radial-gradient(circle at 50% 45%,#e79a6324,transparent 41%),
+ radial-gradient(circle at 50% 52%,#415a7a88,transparent 65%),#0b1220;
+ border:1px solid #415a7a;border-radius:38% 38% 14% 14%}
+.hero-brand::before,.hero-brand::after{content:none}
+.hero-emblem{--emblem-width:min(76%,350px);z-index:2;position:relative;filter:drop-shadow(0 0 20px #f6c88d33)}
+.hero-caption{z-index:3!important;bottom:1rem!important;left:0!important;right:0;text-align:center;font-size:1.15rem!important;color:#f5f2ea!important}
+.hero-orbit{position:absolute;inset:9%;z-index:1;pointer-events:none;border-radius:50%;border:1px solid #f6c88d55;box-shadow:0 0 32px #e79a6321;animation:auralethi-orbit 28s linear infinite}
+.hero-orbit::before{content:"";position:absolute;top:6%;left:16%;width:12px;height:12px;border-radius:50%;background:#f6c88d;box-shadow:0 0 15px #f6c88d}
+.hero-orbit.orbit-two{inset:18%;border-color:#a7b7d64d;animation-duration:37s;animation-direction:reverse}
+.hero-orbit.orbit-two::before{background:#a7b7d6;box-shadow:0 0 12px #a7b7d6}
+@keyframes auralethi-orbit{to{transform:rotate(360deg)}}
+.story-panel{max-width:850px;margin:3rem auto 0;padding:clamp(1.2rem,4vw,3rem);background:linear-gradient(155deg,#1e2a44ab,#0b1220);border:1px solid #415a7a;border-radius:20px}
+.story-panel h2{font:400 clamp(1.6rem,3vw,2.3rem) Georgia,serif;color:#f6c88d;margin-top:2rem}
+.story-panel h2:first-child{margin-top:0}
+.story-panel p{font-size:1.05rem;line-height:1.9}
+.story-panel .story-context{color:#a7b7d6;font-size:.85rem;line-height:1.6;margin-bottom:2rem}
+.about-story>.intro{max-width:60rem}
+@media(max-width:680px){.brand-emblem{--emblem-width:42px}.hero-brand{min-height:320px}.hero-caption{font-size:1rem!important}.hero-emblem{--emblem-width:min(72%,250px)}}
+@media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}

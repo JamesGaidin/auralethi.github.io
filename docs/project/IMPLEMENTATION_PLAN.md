@@ -28,6 +28,7 @@ Proposed paths:
 - `/research/` (preserve current research)
 - `/news/` or `/journey/` (choose one; canonical URL + link)
 - `/about/` (footer only)
+- `/contact/` (footer only)
 - `/get-involved/` (preserve existing path and avoid promising nonexistent contact channels)
 - `/systems/` (keep old links functional until redirects or mapping verified)
 

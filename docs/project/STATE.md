@@ -54,3 +54,9 @@ This documentation synchronization lives on docs/verified-homecoming-handoff pen
 - Draft content intentionally distinguishes research and implementation from proven or operational public services; no unverified results were published.
 - Original founding story, including historical punctuation, is otherwise preserved. About and Contact remain footer-only.
 - **Not on main until founder-approved merge.** After merge, verify actual mobile/desktop rendered pages and continue deeper source-backed program content and news feeds. Browser verification has not been performed.
+
+## Additional pending work, 2026-10-10
+- About is now a second landing page for business card arrivals: welcome, links to Projects/Research/News/Get Involved, then the preserved 2025 founder story.
+- Rebuilt /get-involved/ as a Homecoming styled community participation landing page. Forums, discussion boards and live chat are explicitly future plans, not currently available services. No unverified contact email or personal phone.
+- Added Get Involved to footer navigation across Homecoming pages and legacy shared/footer.html. About, Contact and Get Involved remain absent from the primary header navigation.
+- All these changes remain on feature/about-research-detail-fix, not published until approved and merged; check rendered links and mobile appearance after deployment.

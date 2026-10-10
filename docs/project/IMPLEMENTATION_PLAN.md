@@ -1,5 +1,5 @@
 # Homecoming — HTML/CSS Implementation Plan
-**Status:** Proposed design specification; NOT implemented or published  
+**Status:** APPROVED 2026-10-09, with footer-only Contact Us added; implementation underway on development branch; NOT published  
 **Date:** 2026-10-09  
 **Source of direction:** Founder-approved visual mockup and conversation; final copy, artwork and service claims still require review.  
 **Implementation target:** Existing static GitHub Pages site, without new hosting services or dependencies.

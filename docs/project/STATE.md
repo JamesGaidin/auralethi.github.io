@@ -25,6 +25,15 @@
 - 2026-10-09: Created project documentation on development branch. This is **not** a redesign launch.
 - A weekly Friday morning ChatGPT automation was configured to review verifiable progress and prepare **unpublished** drafts for approval. It is outside the repository; actual delivery and GitHub PR creation are not yet tested. It must not imply auto-publishing.
 
+## Implementation checkpoint — 2026-10-09
+- Founder-approved plan amended with **footer-only Contact Us** alongside About. No public phone number or unverified email address.
+- Implemented new `index.html` and responsive `assets/css/homecoming.css`, optional splash/menu enhancement `assets/js/homecoming.js`.
+- Added static pages: `free-to-meet/`, `safe-to-become/`, `projects/`, `news/`, `contact/`.
+- Updated legacy `shared/navbar.html` and `shared/footer.html` so About and Contact Us appear in footer, not primary navigation. Removed old personal email from footer.
+- Verified the 10 created/updated implementation paths are retrievable from development branch via GitHub API. **Not yet browser-tested**, visually compared to mockup, or deployed. Existing `/about/`, `/research/`, `/systems/`, `/get-involved/` page copy is not yet fully migrated to new visual system.
+- Content deliberately labels most community/living concepts as future vision, with no claim that support or housing services are currently provided. Static hero illustration uses CSS gradients, not finalized artwork.
+- JS currently used for optional splash and small-screen nav; core mobile navigation remains visible without JS. No server or paid API integrated.
+
 ## Not yet done / verify
 - Create redesigned home and supporting pages; capture baseline and test.
 - Confirm real GitHub Pages publication source and deployment behavior before merging.

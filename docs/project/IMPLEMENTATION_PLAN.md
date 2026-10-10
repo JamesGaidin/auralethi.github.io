@@ -44,7 +44,7 @@ Optional splash `<div class="intro" ...>` (progressive enhancement, never blocks
 - `<section class="latest-news">`: heading, short intro, 0–3 real dated news cards; if empty, clearly state updates are being prepared.
 - `<section class="closing-invitation">`: welcoming line and one or two actions.
 `</main>`
-`<footer>`: mission signoff, footer-only About link, secondary/legal/accessibility links, optional approved maker motto.
+`<footer>`: mission signoff, footer-only About and Contact Us links, secondary/legal/accessibility links, optional approved maker motto.
 
 Jix is a **future optional** placeholder only when visibly marked "Coming later"; no fake functioning chat UI, personal data collection, or blocking popup.
 

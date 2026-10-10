@@ -1,31 +1,21 @@
-# Development, News, and Publication Workflow
+# Development and Publishing Workflow
 
-## Low-cost operating model
-Current site is static on an existing GitHub Pages repository. Prefer plain static site technology for near-term launch. HTML/CSS/JavaScript are fine; reserve potential Blazor WebAssembly migration for a later phase if beneficial. **Blazor Server / interactive server hosting requires separate infrastructure; do not silently introduce paid dependencies.**
+## New-session protocol
+Read AGENTS.md, README.md, STATE.md, GOVERNANCE.md, ROADMAP.md and RESEARCH_PUBLICATION.md. Query main HEAD, PR state and changed files fresh. Chat context and stale state docs cannot override GitHub. Report disagreements before acting.
 
-## Development cycle
-1. Read `AGENTS.md`, these docs, actual repository tree and current branch.
-2. Make changes on `feature/*`; never treat draft branch content as deployed.
-3. Test local behavior including semantic HTML, keyboard focus, reduced motion, mobile, URLs and accessibility.
-4. Record updates to STATE and relevant notes in same change set.
-5. Open PR to `main` with scope, screenshots if useful, tested checks, risks and rollback.
-6. Obtain explicit owner approval; merge only after authorization.
-7. Verify public deployment and update STATE with date/URL/results.
+## Change and release
+1. Feature branch for code/doc changes. Never merge or push straight to main without explicit founder release approval.
+2. Preserve genuine assets/logo.png. Image generation can illustrate concepts but must not silently replace the authentic emblem.
+3. Check public truthfulness, status labels, data provenance, visitor-first tone, footer-only About/Contact, privacy and original story integrity.
+4. Check desktop/mobile presentation, responsive nav, reduced motion, keyboard access, links, and public assets. Mark unperformed checks honestly.
+5. Avoid em dashes in new website/editorial copy. Leave historical quoted prose as supplied unless directed otherwise.
+6. Open PR with changed files, verification evidence and remaining risks. Confirm PR status from GitHub again before giving approval guidance.
+7. Wait for founder approval, merge only with authorization, verify HEAD and live rendering, and update STATE.md checkpoint after merge.
 
-## News pipeline (proposed)
-- Weekly progress automation drafts content using verified/public or founder-approved facts.
-- Proposed content record should include: title, date, summary, body, project tags, status, evidence/source links, disclosure approval, publication state.
-- Drafts remain in feature branches/PRs or owner review; private repo activity never flows automatically to public pages.
-- After review/approval, merge and verify the live News page.
-- Do not claim automatic PR authoring, deployment, or scheduled publication until demonstrated end to end.
-- If there is no meaningful progress, say so; don't manufacture news.
-- Consider machine-readable JSON or Markdown plus static generation only when the publishing process is tested.
+## Research and feeds
+Canonical backlog is an external Research_Backlog.xlsx workbook. Use Suggest, Discuss, Admit, Release. Its entries are research opportunities for other people, not assigned tasks for founder. Each question needs explicit release approval. Drafted example questions cannot masquerade as canonical.
+Shared topic-tagged content record and global/per-program feeds are planned, not implemented. No private material auto-published or exposed from linked repositories. Contributor attribution and reuse need agreement.
 
-## Reversibility
-Avoid direct rewrites of `main`. Record commit SHAs and deployment state. Prior site is recoverable through Git history. Maintain working links for QR/business-card route `/about`.
-
-## Domain and hosting
-`CNAME` currently points to `auralethi.org`. Registrar, expiration, DNS and email services require verification before touching records. No domain/email changes are prerequisites to initial content redesign.
-
-## Team collaboration
-Documents are the portable memory fabric. Any agent returning from a new thread should verify the documents against Git HEAD; do not assume that chat memory is authoritative.
+## Operational checks and recovery
+Previous binary uploads and nested SVG/JPEG artwork failed. Exact bytes on GitHub are insufficient proof of proper visual rendering. The merged CSS solution uses genuine proof-sheet PNG as sprite but has not passed documented browser tests. Existing old favicon remains. Prefer reversible focused fixes, and always protect the /about/ QR landing page.
+Weekly Friday draft automation is a separate workflow, not proof of automatic publishing or PR creation.

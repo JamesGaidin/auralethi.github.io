@@ -14,6 +14,8 @@ The visitor, not the organization, is the protagonist. Preserve the following ho
 6. Final invitation: **We want to meet you. Welcome home.**
 7. Footer with secondary organization information and **About**.
 
+**Contact navigation rule:** Provide a distinct `/contact/` page with its entry in the footer only, not the primary header or hero; do not publish a phone number, private address, or unverified contact channel. A truthful interim page may say contact details are being established.
+
 **About navigation rule:** About must be linked in the footer only, not the main header, hero CTAs, persistent navigation, or repeated homepage promos. Keep /about/ directly accessible (including existing business-card QR links). On /about/ the organization, founder, people and collaborators can take center stage. A sitemap or accessibility-oriented full-site directory can include About if necessary, without promoting it in the primary visitor journey.
 
 ## 2. Navigation and route map

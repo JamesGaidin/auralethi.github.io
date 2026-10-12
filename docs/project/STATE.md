@@ -60,3 +60,9 @@ This documentation synchronization lives on docs/verified-homecoming-handoff pen
 - Rebuilt /get-involved/ as a Homecoming styled community participation landing page. Forums, discussion boards and live chat are explicitly future plans, not currently available services. No unverified contact email or personal phone.
 - Added Get Involved to footer navigation across Homecoming pages and legacy shared/footer.html. About, Contact and Get Involved remain absent from the primary header navigation.
 - All these changes remain on feature/about-research-detail-fix, not published until approved and merged; check rendered links and mobile appearance after deployment.
+
+## Icon cleanup branch (2026-10-11)
+- Feature branch `feature/branding-icons-favicon-cleanup` changes header/footer/splash CSS to render the existing verified transparent source `assets/auralethi-logo-transparent-redo2.png`, replacing black-box crop of the opaque proof sheet.
+- All current HTML page heads now reference that same PNG as a tab icon instead of the previous problematic JPEG link. Browser-specific favicon appearance still requires checking after merge and cache refresh.
+- Resized favicon/icon binary files and `.ico` generated in the assistant runtime have NOT yet been uploaded into GitHub. The connector allows Git blob writes with base64 content, but does not directly accept container files. Do not claim the icon pack is published. A proper multiresolution favicon pack remains follow-up.
+- The 'Auralethi Weekly Progress' Friday automation is enabled, but as inspected 2026-10-11 it has no confirmed runs; notifications are disabled. The automation does not publish without founder approval.

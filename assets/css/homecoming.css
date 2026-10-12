@@ -50,3 +50,9 @@
 /* Standalone approved transparent PNG: independent of legacy .hero-art span cropping. */
 .hero-brand .hero-logo-img{display:block;position:relative;z-index:2;align-self:center;justify-self:center;width:min(76%,350px);max-height:76%;height:auto;object-fit:contain;filter:drop-shadow(0 0 20px #f6c88d33)}
 @media(max-width:680px){.hero-brand .hero-logo-img{width:min(72%,250px)}}
+
+/* Genuine isolated PNG for all branding. No opaque proof-sheet sprite crop. */
+.brand-emblem,.splash-emblem{display:inline-block;flex:none;background-image:url('/assets/auralethi-logo-transparent-redo2.png');background-repeat:no-repeat;background-position:center;background-size:contain;background-color:transparent;border:0;box-shadow:none;filter:none}
+.brand-emblem{width:44px;height:44px}
+.splash-emblem{width:clamp(160px,35vw,300px);height:clamp(135px,28vw,245px);filter:drop-shadow(0 0 15px #f6c88d44)}
+@media(max-width:680px){.brand-emblem{width:40px;height:40px}}

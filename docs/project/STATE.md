@@ -71,3 +71,9 @@ This documentation synchronization lives on docs/verified-homecoming-handoff pen
 - Branch `feature/our-journey-records` adds `content/updates/events.json`, `assets/js/journey.js`, a real retrospective `news/` timeline, `docs/project/EVENT_RECORDS.md`, and timeline styles.
 - Five website milestones dated according to public GitHub PR merge evidence are candidates for founder review. PR merge is approval to publish these five summaries. No broader private or Serenari milestone history is released in this change.
 - Subsequent work: use shared project tags for per-program timelines, verify mobile/browser render, and record actual reviewer and publication date after release.
+
+## Pending Serenari history first pass (2026-10-13)
+- `feature/serenari-project-history` adds a publicly tagged historical view on `/research/serenari/` using `assets/js/program-history.js` and existing `content/updates/events.json` (single source of truth).
+- Only the existing public Research doorway event currently has the Serenari tag. It describes publication of a website index, not a technical Serenari milestone. The page explicitly says so.
+- No private design chronology, internal code status, test outcome or birth-event claim has been added. Next release needs evidence gathering and founder sign-off for individual technical events.
+- Separate splash fix is drafted in PR #11; do not conflate release status.

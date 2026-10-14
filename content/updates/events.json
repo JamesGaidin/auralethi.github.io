@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "editorial_note": "Candidate retrospective updates grounded in public PRs. Publishing requires explicit founder approval; merge is not editorial release.",
+  "records": [
+    {
+      "id": "web-2026-10-09-homecoming",
+      "type": "update",
+      "title": "A new front door for Auralethi",
+      "summary": "The first Homecoming website update brought the community mission, Free to Meet and Safe to Become, back to the public homepage.",
+      "event_date": "2026-10-09",
+      "event_timezone": "America/Los_Angeles",
+      "recorded_date": "2026-10-13",
+      "published_date": null,
+      "status": "completed",
+      "visibility": "public-candidate",
+      "reviewed_by": null,
+      "verification_status": "verified-public-merge",
+      "project_ids": [
+        "auralethi-website"
+      ],
+      "tags": [
+        "website",
+        "community"
+      ],
+      "evidence_links": [
+        {
+          "label": "GitHub pull request #1",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/1"
+        }
+      ]
+    },
+    {
+      "id": "web-2026-10-09-research",
+      "type": "update",
+      "title": "Opening the research doorway",
+      "summary": "The Research section gained program descriptions, publication links, and a place reserved for independently explorable questions. The canonical research backlog was not published with this change.",
+      "event_date": "2026-10-09",
+      "event_timezone": "America/Los_Angeles",
+      "recorded_date": "2026-10-13",
+      "published_date": null,
+      "status": "completed",
+      "visibility": "public-candidate",
+      "reviewed_by": null,
+      "verification_status": "verified-public-merge",
+      "project_ids": [
+        "auralethi-website",
+        "cortexos",
+        "serenari"
+      ],
+      "tags": [
+        "website",
+        "research"
+      ],
+      "evidence_links": [
+        {
+          "label": "GitHub pull request #4",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/4"
+        }
+      ]
+    },
+    {
+      "id": "web-2026-10-09-about",
+      "type": "update",
+      "title": "Restoring the founder's story",
+      "summary": "The About page returned to its personal origins, with a separate chapter for the mission as it stands today. Website branding and the animated hero were also introduced.",
+      "event_date": "2026-10-09",
+      "event_timezone": "America/Los_Angeles",
+      "recorded_date": "2026-10-13",
+      "published_date": null,
+      "status": "completed",
+      "visibility": "public-candidate",
+      "reviewed_by": null,
+      "verification_status": "verified-public-merge",
+      "project_ids": [
+        "auralethi-website"
+      ],
+      "tags": [
+        "website",
+        "founding-story"
+      ],
+      "evidence_links": [
+        {
+          "label": "GitHub pull request #5",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/5"
+        }
+      ]
+    },
+    {
+      "id": "web-2026-10-10-participation",
+      "type": "update",
+      "title": "More ways to discover and participate",
+      "summary": "The About page became a second welcome point for visitors. Dedicated research introduction pages were added, and Get Involved now describes the community spaces planned for the future.",
+      "event_date": "2026-10-10",
+      "event_timezone": "America/Los_Angeles",
+      "recorded_date": "2026-10-13",
+      "published_date": null,
+      "status": "completed",
+      "visibility": "public-candidate",
+      "reviewed_by": null,
+      "verification_status": "verified-public-merge",
+      "project_ids": [
+        "auralethi-website"
+      ],
+      "tags": [
+        "website",
+        "community",
+        "research"
+      ],
+      "evidence_links": [
+        {
+          "label": "GitHub pull request #7",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/7"
+        }
+      ]
+    },
+    {
+      "id": "web-2026-10-12-logo",
+      "type": "update",
+      "title": "A clearer visual identity",
+      "summary": "The website's small branding and browser tab icons were updated to use the original standalone transparent emblem instead of a crop of the full brand proof sheet.",
+      "event_date": "2026-10-12",
+      "event_timezone": "America/Los_Angeles",
+      "recorded_date": "2026-10-13",
+      "published_date": null,
+      "status": "completed",
+      "visibility": "public-candidate",
+      "reviewed_by": null,
+      "verification_status": "verified-public-merge",
+      "project_ids": [
+        "auralethi-website"
+      ],
+      "tags": [
+        "website",
+        "design"
+      ],
+      "evidence_links": [
+        {
+          "label": "GitHub pull request #9",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/9"
+        }
+      ]
+    }
+  ]
+}

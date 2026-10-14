@@ -66,3 +66,8 @@ This documentation synchronization lives on docs/verified-homecoming-handoff pen
 - All current HTML page heads now reference that same PNG as a tab icon instead of the previous problematic JPEG link. Browser-specific favicon appearance still requires checking after merge and cache refresh.
 - Resized favicon/icon binary files and `.ico` generated in the assistant runtime have NOT yet been uploaded into GitHub. The connector allows Git blob writes with base64 content, but does not directly accept container files. Do not claim the icon pack is published. A proper multiresolution favicon pack remains follow-up.
 - The 'Auralethi Weekly Progress' Friday automation is enabled, but as inspected 2026-10-11 it has no confirmed runs; notifications are disabled. The automation does not publish without founder approval.
+
+## Pending Our Journey content PR, 2026-10-13
+- Branch `feature/our-journey-records` adds `content/updates/events.json`, `assets/js/journey.js`, a real retrospective `news/` timeline, `docs/project/EVENT_RECORDS.md`, and timeline styles.
+- Five website milestones dated according to public GitHub PR merge evidence are candidates for founder review. PR merge is approval to publish these five summaries. No broader private or Serenari milestone history is released in this change.
+- Subsequent work: use shared project tags for per-program timelines, verify mobile/browser render, and record actual reviewer and publication date after release.

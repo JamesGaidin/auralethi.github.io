@@ -77,3 +77,9 @@ This documentation synchronization lives on docs/verified-homecoming-handoff pen
 - Only the existing public Research doorway event currently has the Serenari tag. It describes publication of a website index, not a technical Serenari milestone. The page explicitly says so.
 - No private design chronology, internal code status, test outcome or birth-event claim has been added. Next release needs evidence gathering and founder sign-off for individual technical events.
 - Separate splash fix is drafted in PR #11; do not conflate release status.
+
+## Serenari retrospective expansion (2026-10-13)
+- PR #12 now contains a substantive public-facing Serenari research story and an explicit personal-lab ownership boundary. The private design source states that Serenari is a single-user personal CortexOS node, not an Auralethi-owned product or service.
+- The page includes retrospective July 2026 architecture work (period only), the October 4 v1.0 design lock (document-backed, private evidence), and an October 8 first local greeting (founder-reported, not independently verified). The page explains that design validation is not runtime autonomy proof.
+- These retrospective page paragraphs are founder publication candidates. No private technical design documents or private-repo links are disclosed.
+- Browser rendering and an isolated PR preview URL are not yet verified. Preview infrastructure remains separately pending.

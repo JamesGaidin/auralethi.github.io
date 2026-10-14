@@ -63,3 +63,6 @@
 .journey-entry h3{margin:.5rem 0;font:400 1.5rem Georgia,serif}
 .journey-entry .journey-source{margin-top:auto}
 .journey-tags{font-size:.78rem!important;color:var(--brand-mist,var(--muted))!important}
+
+/* Use the original transparent PNG as a direct image in the introduction. */
+.intro-splash .splash-logo-direct{display:block;width:clamp(160px,35vw,300px);height:auto;max-height:245px;object-fit:contain;justify-self:center;filter:drop-shadow(0 0 15px #f6c88d44);background:none;position:relative;inset:auto}

@@ -66,3 +66,14 @@
 
 /* Use the original transparent PNG as a direct image in the introduction. */
 .intro-splash .splash-logo-direct{display:block;width:clamp(160px,35vw,300px);height:auto;max-height:245px;object-fit:contain;justify-self:center;filter:drop-shadow(0 0 15px #f6c88d44);background:none;position:relative;inset:auto}
+
+/* Resource navigation: progressively disclosed and keyboard accessible. */
+.resource-browser{display:grid;gap:1rem;margin:1.5rem 0}
+.resource-browser details{border:1px solid rgba(180,199,225,.24);border-radius:14px;padding:1rem;background:rgba(13,21,38,.36)}
+.resource-browser details details{margin-top:.8rem;background:transparent}
+.resource-browser summary{cursor:pointer;line-height:1.6;padding:.2rem;list-style-position:inside}
+.resource-browser summary:focus-visible{outline:2px solid #e8b881;outline-offset:4px}
+.resource-panel{padding:.85rem .25rem 0}
+.resource-label{font-size:.85rem;opacity:.8;margin-left:.4rem}
+.resource-note{font-size:.9rem;line-height:1.6;margin-top:1.6rem}
+.resource-browser .card{overflow-wrap:anywhere}

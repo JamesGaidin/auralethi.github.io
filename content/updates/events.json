@@ -5,8 +5,8 @@
     {
       "id": "web-2026-10-09-homecoming",
       "type": "update",
-      "title": "A new front door for Auralethi",
-      "summary": "The first Homecoming website update brought the community mission, Free to Meet and Safe to Become, back to the public homepage.",
+      "title": "Auralethi's new front door",
+      "summary": "Auralethi rebuilt its public home around belonging, community, and human possibility. The new site makes it easier to discover the mission, explore research, and follow major developments.",
       "event_date": "2026-10-09",
       "event_timezone": "America/Los_Angeles",
       "recorded_date": "2026-10-13",
@@ -24,10 +24,28 @@
       ],
       "evidence_links": [
         {
-          "label": "GitHub pull request #1",
+          "label": "Homecoming launch",
           "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/1"
+        },
+        {
+          "label": "Research section",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/4"
+        },
+        {
+          "label": "About and identity",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/5"
+        },
+        {
+          "label": "Participation and research pages",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/7"
+        },
+        {
+          "label": "Visual identity refinement",
+          "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/9"
         }
-      ]
+      ],
+      "feed_level": "journey",
+      "parent_id": null
     },
     {
       "id": "web-2026-10-09-research",
@@ -56,7 +74,9 @@
           "label": "GitHub pull request #4",
           "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/4"
         }
-      ]
+      ],
+      "feed_level": "project",
+      "parent_id": "web-2026-10-09-homecoming"
     },
     {
       "id": "web-2026-10-09-about",
@@ -83,7 +103,9 @@
           "label": "GitHub pull request #5",
           "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/5"
         }
-      ]
+      ],
+      "feed_level": "project",
+      "parent_id": "web-2026-10-09-homecoming"
     },
     {
       "id": "web-2026-10-10-participation",
@@ -111,7 +133,9 @@
           "label": "GitHub pull request #7",
           "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/7"
         }
-      ]
+      ],
+      "feed_level": "project",
+      "parent_id": "web-2026-10-09-homecoming"
     },
     {
       "id": "web-2026-10-12-logo",
@@ -138,7 +162,9 @@
           "label": "GitHub pull request #9",
           "url": "https://github.com/JamesGaidin/auralethi.github.io/pull/9"
         }
-      ]
+      ],
+      "feed_level": "project",
+      "parent_id": "web-2026-10-09-homecoming"
     }
   ]
 }

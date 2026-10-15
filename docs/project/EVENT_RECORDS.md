@@ -28,3 +28,11 @@ Do not duplicate a record for each project; use its tags and project_ids for lat
 
 ## Current limits
 The renderer is plain browser JavaScript fetching static JSON. It fails with a readable fallback when the file cannot load. Browser QA, accessibility audits and eventual no-JavaScript pre-rendering remain to be done. Only the organization-wide Journey uses this data so far.
+
+## Hierarchical publication levels
+- `feed_level: journey` is reserved for major public chapters, not commits, routine implementation or incremental cosmetic adjustments.
+- `feed_level: project` keeps relevant subsidiary events in the canonical record but excludes them from Our Journey.
+- `parent_id` points to a single stable parent event ID for subordinate updates. For top-level events it is null. Keep the relationships when correcting dates or changing a project's presentation.
+- Before admitting a new `journey` entry, ask whether someone unfamiliar with the project would consider it a meaningful change in Auralethi's story. A routine build, bug fix, server setup, or PR alone is not sufficient.
+- Project-level event records can eventually appear in project-specific timelines or a linked drill-down; their absence from Our Journey does not delete the audit trail.
+- Milestones must still be grounded, editorially approved, and bounded by public/private release decisions.

@@ -6,7 +6,7 @@
     .then(response => { if (!response.ok) throw Error("Could not load records"); return response.json(); })
     .then(payload => {
       if (!payload || !Array.isArray(payload.records)) throw Error("Invalid records");
-      const items = payload.records.filter(r => r.visibility === "public-candidate" && r.verification_status === "verified-public-merge")
+      const items = payload.records.filter(r => r.visibility === "public-candidate" && r.verification_status === "verified-public-merge" && r.feed_level === "journey")
         .sort((a,b) => b.event_date.localeCompare(a.event_date) || a.id.localeCompare(b.id));
       if (!items.length) { root.textContent = "Our public timeline is being prepared."; return; }
       root.replaceChildren();

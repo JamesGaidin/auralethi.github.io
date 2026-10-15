@@ -83,3 +83,9 @@ This documentation synchronization lives on docs/verified-homecoming-handoff pen
 - The page includes retrospective July 2026 architecture work (period only), the October 4 v1.0 design lock (document-backed, private evidence), and an October 8 first local greeting (founder-reported, not independently verified). The page explains that design validation is not runtime autonomy proof.
 - These retrospective page paragraphs are founder publication candidates. No private technical design documents or private-repo links are disclosed.
 - Browser rendering and an isolated PR preview URL are not yet verified. Preview infrastructure remains separately pending.
+
+## Pending Free to Meet community resources (2026-10-14)
+- `feature/free-to-meet-community-resources` adds progressive disclosure for housing and accessibility referrals on `/free-to-meet/` with native `<details>` elements, avoiding new JavaScript and respecting normal keyboard/browser operation.
+- External starting points verified against Oregon OHCS, 211info, Oregon ODHS/ADRC, and HUD. These are referrals, not Auralethi-operated services, eligibility determinations or guarantees. Provider availability may change.
+- This starts with Oregon and general national options; do not infer localized eligibility from browser geolocation or gather sensitive medical/housing disclosures.
+- PR #13 independently handles the Our Journey parent-child publication hierarchy. This resources PR does not modify it.

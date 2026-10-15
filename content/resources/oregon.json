@@ -1,0 +1,136 @@
+{
+  "schema_version": "0.1",
+  "region": "Oregon",
+  "review_note": "Editorial candidates. Official sources checked 2026-10-14. Availability and eligibility are never guaranteed.",
+  "resources": [
+    {
+      "id": "or-211",
+      "name": "211info",
+      "region": "Oregon",
+      "needs": [
+        "housing",
+        "food",
+        "utilities",
+        "transportation",
+        "legal",
+        "employment",
+        "childcare",
+        "health"
+      ],
+      "audience": "Anyone looking for a local referral",
+      "steps": [
+        "Open 211info and search by your ZIP code or city.",
+        "Choose the category matching your need.",
+        "Contact the listed provider to check current availability; if you're stuck, call 211 and ask for a specialist."
+      ],
+      "url": "https://www.211info.org/",
+      "phone": "211",
+      "alternate_phone": "866-698-6155",
+      "source": {
+        "url": "https://www.211info.org/",
+        "label": "211info official"
+      },
+      "verified_on": "2026-10-14",
+      "status": "directory-referral",
+      "limitations": "Referrals are not guaranteed openings, eligibility, or placement."
+    },
+    {
+      "id": "or-ohcs",
+      "name": "Oregon Housing and Community Services",
+      "region": "Oregon",
+      "needs": [
+        "housing",
+        "utilities"
+      ],
+      "audience": "People needing rental or housing assistance",
+      "steps": [
+        "Open the state housing help guide.",
+        "Find your county's Community Action Agency.",
+        "Contact the local agency about rental, shelter or utilities programs and what documents to prepare."
+      ],
+      "url": "https://www.oregon.gov/ohcs/pages/housing-resources.aspx",
+      "source": {
+        "url": "https://www.oregon.gov/ohcs/pages/housing-resources.aspx",
+        "label": "OHCS housing help"
+      },
+      "verified_on": "2026-10-14",
+      "status": "government-referral",
+      "limitations": "OHCS does not directly provide emergency housing services. Funding and local eligibility vary."
+    },
+    {
+      "id": "or-one",
+      "name": "Oregon ONE benefits",
+      "region": "Oregon",
+      "needs": [
+        "food",
+        "finances",
+        "health",
+        "childcare"
+      ],
+      "audience": "People applying for food, medical, cash or childcare benefits",
+      "steps": [
+        "Review medical, food, cash and childcare programs on the Oregon benefits website.",
+        "Apply online using ONE, by telephone, or at a local office.",
+        "Check the state checklist for information you may need and ask for application help if necessary."
+      ],
+      "url": "https://www.oregon.gov/odhs/benefits/Pages/default.aspx",
+      "phone": "800-699-9075",
+      "source": {
+        "url": "https://www.oregon.gov/odhs/benefits/Pages/default.aspx",
+        "label": "ODHS benefits"
+      },
+      "verified_on": "2026-10-14",
+      "status": "government-program-entry",
+      "limitations": "The state determines eligibility. Do not send personal documents to Auralethi."
+    },
+    {
+      "id": "or-adrc",
+      "name": "Aging and Disability Resource Connection",
+      "region": "Oregon",
+      "needs": [
+        "disability",
+        "assisted-living",
+        "transportation",
+        "health"
+      ],
+      "audience": "People seeking disability, aging, or long-term support resources",
+      "steps": [
+        "Review the ADRC overview or call the statewide number.",
+        "Explain the support you need and your county; ask for an accessible format or accommodation if helpful.",
+        "Request contact details for the relevant local service and ask how to start an assessment."
+      ],
+      "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Pages/adrc.aspx",
+      "phone": "855-673-2372",
+      "source": {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Pages/adrc.aspx",
+        "label": "ODHS ADRC"
+      },
+      "verified_on": "2026-10-14",
+      "status": "government-referral",
+      "limitations": "Programs and eligibility depend on the specific support requested."
+    },
+    {
+      "id": "or-ohp",
+      "name": "Oregon Health Plan",
+      "region": "Oregon",
+      "needs": [
+        "health"
+      ],
+      "audience": "People seeking Medicaid health coverage",
+      "steps": [
+        "Review the Oregon Health Plan eligibility and application page.",
+        "Apply through ONE or by calling the ONE Customer Service Center.",
+        "Ask the state how to submit requested documents and follow up on the application."
+      ],
+      "url": "https://www.oregon.gov/oha/HSD/OHP/Pages/Apply.aspx",
+      "phone": "800-699-9075",
+      "source": {
+        "url": "https://www.oregon.gov/oha/HSD/OHP/Pages/Apply.aspx",
+        "label": "OHA apply for OHP"
+      },
+      "verified_on": "2026-10-14",
+      "status": "government-program-entry",
+      "limitations": "Eligibility is determined by the state; coverage is not guaranteed."
+    }
+  ]
+}

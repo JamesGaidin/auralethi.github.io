@@ -77,3 +77,17 @@
 .resource-label{font-size:.85rem;opacity:.8;margin-left:.4rem}
 .resource-note{font-size:.9rem;line-height:1.6;margin-top:1.6rem}
 .resource-browser .card{overflow-wrap:anywhere}
+
+/* Oregon Resource Navigator: responsive, keyboard-first, no login or collection. */
+.resource-controls{display:grid;gap:.55rem;max-width:580px;margin:1.4rem 0}
+.resource-controls label{font-weight:700}
+.resource-controls select{width:100%;padding:.8rem;background:#101a2c;color:#fff;border:1px solid #8b9bb0;border-radius:.55rem;font:inherit}
+.resource-controls select:focus-visible,.resource-result a:focus-visible{outline:2px solid #edc894;outline-offset:3px}
+.resource-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1rem;margin:1rem 0 2rem}
+.resource-result{display:flex;flex-direction:column;gap:.65rem}
+.resource-result h3{margin:0}
+.resource-result p{margin:.2rem 0}
+.resource-result details{margin-top:.5rem;border-top:1px solid rgba(180,199,225,.24);padding-top:.75rem}
+.resource-result summary{cursor:pointer;font-weight:600}
+.resource-result li{margin:.6rem 0}
+.resource-caveat{font-size:.84rem;opacity:.8}

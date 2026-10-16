@@ -111,3 +111,7 @@
 .quick-exit:hover{background:#ac2135}
 .quick-exit:focus-visible{outline:3px solid #ffe1a1;outline-offset:3px}
 @media(max-width:550px){.quick-exit{top:max(.5rem,env(safe-area-inset-top));right:.5rem;padding:.55rem .7rem;font-size:.9rem}}
+
+/* Keep the exit visible without covering primary navigation or the lower-right Crisis Help launcher. */
+.quick-exit{top:auto;bottom:max(1rem,env(safe-area-inset-bottom));right:auto;left:1rem}
+@media(max-width:550px){.quick-exit{top:auto;right:auto;bottom:max(.6rem,env(safe-area-inset-bottom));left:.6rem}}

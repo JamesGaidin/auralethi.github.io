@@ -105,3 +105,13 @@
 .crisis-close{background:transparent;color:white;border:1px solid #bbcede;border-radius:6px;padding:.4rem .55rem;cursor:pointer}
 .crisis-disclaimer{font-size:.78rem;color:#e0e8f2}
 @media(max-width:480px){.crisis-help{right:.6rem;bottom:max(.6rem,env(safe-area-inset-bottom))}.crisis-toggle{padding:.7rem .95rem}.crisis-panel{max-height:65vh}}
+
+/* Quick exit appears on Safe to Become independently of emergency contacts. */
+.quick-exit{position:fixed;top:max(.75rem,env(safe-area-inset-top));right:.75rem;z-index:10001;display:inline-flex;align-items:center;gap:.35rem;padding:.72rem 1rem;border:2px solid white;border-radius:.5rem;background:#8e1b2a;color:white!important;font:700 1rem/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 6px 20px #0008}
+.quick-exit:hover{background:#ac2135}
+.quick-exit:focus-visible{outline:3px solid #ffe1a1;outline-offset:3px}
+@media(max-width:550px){.quick-exit{top:max(.5rem,env(safe-area-inset-top));right:.5rem;padding:.55rem .7rem;font-size:.9rem}}
+
+/* Keep the exit visible without covering primary navigation or the lower-right Crisis Help launcher. */
+.quick-exit{top:auto;bottom:max(1rem,env(safe-area-inset-bottom));right:auto;left:1rem}
+@media(max-width:550px){.quick-exit{top:auto;right:auto;bottom:max(.6rem,env(safe-area-inset-bottom));left:.6rem}}

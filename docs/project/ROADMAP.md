@@ -16,7 +16,7 @@ Status updated from verified GitHub merge history, 2026-10-09. Code merged is no
 ## Content and research publishing
 - [ ] Create structured program, publication, research question and news update records with tags, evidence, approval and source.
 - [ ] Generate global and per-program feeds from shared approved records.
-- [ ] Review canonical Research_Backlog.xlsx entries RES-0001 through RES-0008 individually for release. Admission is not publication.
+- [ ] Review canonical Research_Backlog.xlsx entries RES-0001 through RES-0009 individually for release. Admission is not publication.
 - [ ] Publish verified CortexOS and Serenari documentation and project updates.
 - [ ] Add approved team/AI collaborator biographies, organizational details and founder update.
 - [ ] Confirm organizational contact address/channel before exposing a way to contact the organization.

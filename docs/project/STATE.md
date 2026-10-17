@@ -26,7 +26,7 @@ Verified GitHub snapshot, 2026-10-09, main HEAD: 8c2e2407a00e8d80c66f49b40f11057
 - New writing must NOT use em dashes. Original founder text is a historical exception, preserve its punctuation.
 
 ## Research policy
-Canonical Research_Backlog.xlsx is stored outside this public repo. Snapshot of Oct 6 has IDs RES-0001 through RES-0008, all Unassigned/Backlog. Admission does not authorize publication. Governed path: Suggest, Discuss, Admit, Release. Independent researchers may freely explore questions without obligation. Avoid treating conversation-generated examples as canonical.
+Canonical Research_Backlog.xlsx is stored outside this public repo. Snapshot of Oct 16 has IDs RES-0001 through RES-0009, all Unassigned/Backlog. Admission does not authorize publication. Governed path: Suggest, Discuss, Admit, Release. Independent researchers may freely explore questions without obligation. Avoid treating conversation-generated examples as canonical.
 
 ## Unverified or unfinished
 - Real browser testing for visual logo crop, splash, mobile, desktop, link correctness, keyboard usability, reduced-motion, caching and favicon.

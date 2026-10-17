@@ -28,7 +28,7 @@ For questions, add `research_question`, `possible_directions`, `success_criteria
 10. Accessible static-first delivery on GitHub Pages, with any interactive filtering progressively enhanced.
 
 ## Canonical records and release boundary
-- Primary current source is `Research_Backlog.xlsx` outside this public website repository. Its October 6 snapshot contains RES-0001 through RES-0008, marked Backlog and Unassigned.
+- Primary current source is `Research_Backlog.xlsx` outside this public website repository. Its October 16 snapshot contains RES-0001 through RES-0009, marked Backlog and Unassigned.
 - Follow **Suggest, Discuss, Admit, Release**. Capture/admission alone do not authorize public release.
 - PR #4 already merged the public Research page scaffold, but no canonical backlog items were published. A planned feed is not a built feed.
 - The researcher for an open backlog question is intended to be an independent interested person, not the founder by default.

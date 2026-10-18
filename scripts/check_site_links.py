@@ -64,11 +64,11 @@ def extract(path):
     if path.suffix == ".html":
         parser = Refs(); parser.feed(txt); return parser.refs
     if path.suffix == ".json":
-        return re.findall(r'https?://[^\\s"<>]+', txt)
+        return re.findall(r"https?://[^\\s\\\"<>]+", txt)
     if path.suffix == ".css":
-        return re.findall(r'url\\(\\s*[\\'"]?([^\\)\\'"]+)', txt)
+        return re.findall(r"""url\\(\\s*[\x22\x27]?([^\\)\x22\x27]+)""", txt)
     # JavaScript: catch quoted root-relative assets and literal external URLs.
-    return re.findall(r'["\\']((?:https?://|/)[^"\\']+)["\\']', txt)
+    return re.findall(r"""[\x22\x27]((?:https?://|/)[^\x22\x27]+)[\x22\x27]""", txt)
 
 def verify_external(url):
     req = urllib.request.Request(url, headers={"User-Agent": "AuralethiResourceAudit/1.0 (+https://auralethi.org)", "Accept": "text/html,*/*"}, method="HEAD")

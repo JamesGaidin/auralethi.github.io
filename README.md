@@ -1,17 +1,21 @@
-# auralethi.github.io
+# Auralethi website
 
-Public website for [Auralethi.org](https://auralethi.org) — AI safety research and system design.
+Public, static website for [Auralethi](https://auralethi.org/), published from this repository.
 
-## Site Structure (V1)
+## Active pages
 
-- `/` — Home
-- `/about` — About
-- `/research` — Research and Relational Surface Risk framework
-- `/systems` — Systems (Halorin, CortexOS)
-- `/get-involved` — Get Involved
+- `/` Home
+- `/free-to-meet/` Oregon and national resource navigation
+- `/safe-to-become/` Support pathways and safety information
+- `/projects/` Projects and long-term vision
+- `/research/` Research, CortexOS, Serenari and relational risk
+- `/news/` Our Journey
+- `/about/`, `/contact/`, `/get-involved/` Footer destinations
 
-## Shared Components
+The site's public content and current presentation use `assets/css/homecoming.css`, `assets/js/`, `content/resources/`, and `content/updates/`. Legacy Systems, shared HTML fragments and the old standalone stylesheet have been removed from the current tree. Prior versions remain available in Git history.
 
-- `/shared/navbar.html` — Site navigation
-- `/shared/footer.html` — Site footer
-- `/style.css` — Global styles
+For contributor and publication guidance see `AGENTS.md` and `docs/project/`.
+
+## Link maintenance
+
+A weekly GitHub Actions audit checks site references and external resource destinations. See `docs/project/LINK_MAINTENANCE.md` and `scripts/check_site_links.py`. Confirmed failures are surfaced for human review, not silently deleted.

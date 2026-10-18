@@ -4,3 +4,8 @@
 # OS
 .DS_Store
 Thumbs.db
+
+link-audit-report.json
+audit-issue.md
+__pycache__/
+*.pyc

@@ -1,0 +1,60 @@
+name: Weekly website link audit
+on:
+  schedule:
+    - cron: '0 16 * * 5'
+  workflow_dispatch:
+  push:
+    paths:
+      - '**/*.html'
+      - '**/*.json'
+      - 'assets/**/*.css'
+      - 'assets/**/*.js'
+      - 'scripts/check_site_links.py'
+      - '.github/workflows/link-audit.yml'
+permissions:
+  contents: read
+  issues: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check page, asset and external resource references
+        id: audit
+        continue-on-error: true
+        run: python scripts/check_site_links.py
+      - name: Store full diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-link-audit
+          path: link-audit-report.json
+          if-no-files-found: warn
+      - name: Open or update maintenance issue when links fail
+        if: steps.audit.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('link-audit-report.json'))
+          lines=['## Automated site link audit', '', 'A resource URL is not automatically removed when it fails. Verify manually before publication changes.', '', '### Missing internal references']
+          lines += [f"- \`{x['source']}\` links to \`{x['url']}\`" for x in r['internal_missing']] or ['- None']
+          lines += ['', '### External 404/410 responses']
+          lines += [f"- {x['url']} (HTTP {x['status']})" for x in r['external_broken']] or ['- None']
+          lines += ['', 'See workflow artifact for all results and transient failures.']
+          open('audit-issue.md','w').write('\n'.join(lines)+'\n')
+          PY
+          existing=$(gh issue list --state open --json number,title --jq '.[] | select(.title == "Website link audit: review broken destinations") | .number' | head -1)
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file audit-issue.md
+          else
+            gh issue create --title "Website link audit: review broken destinations" --body-file audit-issue.md
+          fi
+      - name: Fail on confirmed broken links
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
